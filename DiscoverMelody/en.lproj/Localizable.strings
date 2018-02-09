@@ -1,0 +1,63 @@
+/* 
+  Localizable.strings
+  DiscoverMelody
+
+  Created by xiaodw on 2018/1/30.
+  Copyright © 2018年 Beijing Discover Melody co., ltd. All rights reserved.
+*/
+"GLOBAL_FONT_20_NAME" = "PingFangSC-Light";
+"GLOBAL_FONT_20_SIZE" = "20";
+"GLOBAL_FONT_18_NAME" = "PingFangSC-Light";
+"GLOBAL_FONT_18_SIZE" = "18";
+"GLOBAL_FONT_18R_NAME" = "PingFangSC-Regular";
+"GLOBAL_FONT_18R_SIZE" = "18";
+"GLOBAL_FONT_16_NAME" = "PingFangSC-Light";
+"GLOBAL_FONT_16_SIZE" = "16";
+"GLOBAL_FONT_16R_NAME" = "PingFangSC-Regular";
+"GLOBAL_FONT_16R_SIZE" = "16";
+"GLOBAL_FONT_14_NAME" = "PingFangSC-Light";
+"GLOBAL_FONT_14_SIZE" = "14";
+"GLOBAL_FONT_14T_NAME" = "PingFangSC-Thin";
+"GLOBAL_FONT_14T_SIZE" = "14";
+
+"GLOBAL_APP_LANGUAGE" = "us";
+
+"SELECT_DEVICE_VIEW_LABEL_TITLE" = "Device Selection";
+"SELECT_DEVICE_VIEW_LABEL_MICROPHONE" = "Microphone:";
+"SELECT_DEVICE_VIEW_LABEL_SPEAKER" = "Speaker:";
+"SELECT_DEVICE_VIEW_LABEL_CAMERA" = "Camera:";
+"SELECT_DEVICE_VIEW_BUTTON_CONFIRM" = "Confirm";
+
+"DEVICE_SELECTOR_LABEL_TEXT_ALIGNMENT" = "0";
+"DEVICE_SELECTOR_LABEL_WIDTH" = "80";
+"DEVICE_SELECTOR_SPLITLINE_OFFSET" = "100";
+"DEVICE_SELECTOR_POPUPBUTTON_LEFT_OFFSET" = "106";
+
+"LOGIN_VIEW_LOGO_IMG_NAME" = "loginLogoEN";
+"LOGIN_VIEW_LOGO_IMG_WIDTH" = "149";
+"LOGIN_VIEW_LOGO_IMG_HEIGHT" = "111";
+"LOGIN_VIEW_LOGO_OFFSET_ABOVE_CODE_TEXT_FIELD" = "71";
+
+"LOGIN_VIEW_TEXT_FIELD_CODE_PLACEHOLDER" = "Please input lesson code";
+"LOGIN_VIEW_TEXT_FIELD_CODE_WIDTH" = "300";
+"LOGIN_VIEW_MICROPHONE_SELECTOR_LABLE" = "Microphone";
+"LOGIN_VIEW_CAMERA_SELECTOR_LABLE" = "Camera";
+"LOGIN_VIEW_VERSION_PREFIX" = "Version beta %@";
+
+"LOGIN_VIEW_BUTTON_JOIN" = "Join";
+"VIDEO_VIEW_COUNT_DOWN_CLOCK_NOTICE" = "Your session will start in %d minutes";
+"VIDEO_VIEW_COUNTDOWN_NOTICE" = "%.2d:%.2d:%.2d Your session will be disconnected in %d minutes";
+"VIDEO_VIEW_RECORD_STATUS" = "Recording";
+
+"ALERT_BUTTON_OK" = "Confirm";
+"ALERT_BUTTON_CANCEL" = "Cancel";
+"ALERT_EXIT_LIVE_ROOM" = "Are you sure you want to end the session?";
+"ALERT_LIVE_AUTO_CLOSE" = "After confirmation, your session will be disconnected";
+"ALERT_UPDATE_TITLE" = "new version found";
+
+"OVERLAY_MSG_FONT_SIZE" = "16";
+"OVERLAY_MAX_WIDTH" = "400";
+"OVERLAY_MAX_HEIGHT" = "400";
+"OVERLAY_MSG_UNKOWN_REASON" = "Unkown reason";
+"OVERLAY_MSG_UNEXPECTED_DATA" = "Unexpected data";
+
