@@ -7,10 +7,9 @@
 //
 
 #import "LogData.h"
+#import "UrlConfig.h"
 
 static LogData *defaultLogData = nil;
-
-#define URL_REPORT_AGORA_LOG @"http://test.api.cn.discovermelody-app.com/Log/agoraLog"
 
 @implementation LogData
 
