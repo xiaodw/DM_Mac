@@ -29,6 +29,11 @@ THE SOFTWARE.
 Copyright 2017 agora.io. All rights reserved.
 
 
+## DevMateKit
+
+© 2012-2016 DevMate Inc. All rights reserved.
+
+
 ## MJExtension
 
 Copyright (c) 2013-2015 MJExtension (https://github.com/CoderMJLee/MJExtension)

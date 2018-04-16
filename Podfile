@@ -6,4 +6,5 @@ pod 'AFNetworking'
 pod 'AgoraRtcEngine_macOS'
 pod 'Masonry'
 pod 'MJExtension', '~> 3.0'
+pod 'DevMateKit'
 end

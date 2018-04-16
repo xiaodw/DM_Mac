@@ -11,6 +11,8 @@
 #import "DMMacros.h"
 #import "DMConfig.h"
 #import "DMConfigManager.h"
+#import <DevMateKit/DevMateKit.h>
+
 
 @interface AppDelegate ()
 @property NSSize loginSize;
@@ -29,6 +31,13 @@
     }
     
     [self.window setDelegate:self];
+    
+    [DevMateKit sendTrackingReport:nil delegate:nil];
+    [DevMateKit setupIssuesController:nil reportingUnhandledIssues:YES];
+}
+
+- (IBAction)showFeedbackDialog:(id)sender {
+    [DevMateKit showFeedbackDialog:nil inMode:DMFeedbackDefaultMode];
 }
 
 - (void)applicationWillTerminate:(NSNotification *)aNotification {
