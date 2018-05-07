@@ -95,7 +95,7 @@
 {
     self.textFont = [NSFont fontWithName:NSLocalizedString(@"GLOBAL_FONT_20_NAME", nil) size:NSLocalizedString(@"GLOBAL_FONT_20_SIZE", nil).intValue];
     self.textColor = [NSColor whiteColor];
-    self.backgroudColor = [NSColor colorWithRed:234/255.f green:29/255.f blue:118/255.f alpha:1.f];
+    self.backgroudColor = [NSColor colorWithRed:229/255.f green:57/255.f blue:59/255.f alpha:1.f];
     self.textAlignment = NSTextAlignmentCenter;
     self.textString = @"";
     

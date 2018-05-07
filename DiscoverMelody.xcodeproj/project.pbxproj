@@ -133,6 +133,7 @@
 		0D74BC432019B0DC002D71E9 /* VideoStatusBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VideoStatusBar.m; sourceTree = "<group>"; };
 		0D74BC452019C23A002D71E9 /* CountDownClock.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountDownClock.h; sourceTree = "<group>"; };
 		0D74BC462019C23A002D71E9 /* CountDownClock.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountDownClock.m; sourceTree = "<group>"; };
+		0D751BBD20A0389500E738E5 /* ColorConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorConfig.h; sourceTree = "<group>"; };
 		0D8456AC202C24B000EFDB6B /* OverlayView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OverlayView.h; sourceTree = "<group>"; };
 		0D8456AD202C24B000EFDB6B /* OverlayView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OverlayView.m; sourceTree = "<group>"; };
 		0D89AB93201ACB620055BAF9 /* VideoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = VideoView.h; sourceTree = "<group>"; };
@@ -150,7 +151,7 @@
 		0D8D0B662020760F00698771 /* DeviceSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceSelector.m; sourceTree = "<group>"; };
 		0DBFF62620219A94005513E9 /* ColorButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorButton.h; sourceTree = "<group>"; };
 		0DBFF62720219A94005513E9 /* ColorButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorButton.m; sourceTree = "<group>"; };
-		0DE8FE882016E6A100A09644 /* DiscoverMelody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscoverMelody.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DE8FE882016E6A100A09644 /* WeEducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeEducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE8FE8B2016E6A100A09644 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0DE8FE8C2016E6A100A09644 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0DE8FE8E2016E6A100A09644 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -240,6 +241,7 @@
 				0D3EEDEB202AAB970010540D /* Server */,
 				0D3EEDEA202AAB5F0010540D /* Local */,
 				0D50579D2071E02200DF1CB2 /* UrlConfig.h */,
+				0D751BBD20A0389500E738E5 /* ColorConfig.h */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -412,7 +414,7 @@
 		0DE8FE892016E6A100A09644 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0DE8FE882016E6A100A09644 /* DiscoverMelody.app */,
+				0DE8FE882016E6A100A09644 /* WeEducation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -493,7 +495,7 @@
 			);
 			name = DiscoverMelody;
 			productName = DiscoverMelody;
-			productReference = 0DE8FE882016E6A100A09644 /* DiscoverMelody.app */;
+			productReference = 0DE8FE882016E6A100A09644 /* WeEducation.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -810,8 +812,8 @@
 				DEVELOPMENT_TEAM = D496CTUFNL;
 				INFOPLIST_FILE = DiscoverMelody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.DiscoverMelody;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.WeEducation;
+				PRODUCT_NAME = WeEducation;
 			};
 			name = Debug;
 		};
@@ -826,8 +828,8 @@
 				DEVELOPMENT_TEAM = D496CTUFNL;
 				INFOPLIST_FILE = DiscoverMelody/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.DiscoverMelody;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.WeEducation;
+				PRODUCT_NAME = WeEducation;
 			};
 			name = Release;
 		};

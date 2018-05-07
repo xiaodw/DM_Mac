@@ -12,4 +12,5 @@
 -(void)startCountBegin:(double)begin Red:(double)red Warning:(double)warn End:(double)end;
 -(void)setStopAction:(SEL)action withTarget:(id)target;
 -(void)stopCount;
+-(void)setRecStatusHidden:(BOOL)yesno;
 @end

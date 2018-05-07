@@ -13,7 +13,7 @@
 @interface VideoStatusBar()
 @property (strong,nonatomic)NSImageView* imageViewTime;
 @property (strong,nonatomic)NSTextView* textViewTime;
-@property (strong,nonatomic)NSTextView* textViewStatus;
+@property (strong,nonatomic)NSTextView* textViewRecStatus;
 @property (strong,nonatomic)NSTimer* timerCount;
 @property (strong,nonatomic)NSColor* myRedColor;
 @property (strong,nonatomic)NSImage* myRedClock;
@@ -40,11 +40,12 @@
         [self setupSubViews];
         [self layoutSubViews];
         [self setHidden:YES];
+        [self.textViewRecStatus setHidden:YES];
         self.countBegin = 0;
         self.countBeginWithRedColor = 0;
         self.countBeginWithRedColorWarning = 0;
         self.countEnd = 0;
-        self.myRedColor = [NSColor colorWithRed:234/255.f green:29/255.f blue:118/255.f alpha:1.f];
+        self.myRedColor = [NSColor colorWithRed:229/255.f green:57/255.f blue:59/255.f alpha:1.f];
         self.myRedClock = [NSImage imageNamed:@"redClock"];
     }
     return self;
@@ -66,16 +67,16 @@
     [self.textViewTime setFont:[NSFont fontWithName:NSLocalizedString(@"GLOBAL_FONT_18_NAME", nil) size:NSLocalizedString(@"GLOBAL_FONT_18_SIZE", nil).intValue]];
     [self addSubview:self.textViewTime];
     
-    self.textViewStatus = [[NSTextView alloc]initWithFrame:NSMakeRect(0, 0, 176, 176)];
-    [self.textViewStatus setWantsLayer:YES];
-    [self.textViewStatus setBackgroundColor:[NSColor clearColor]];
-    [self.textViewStatus setTextColor:[NSColor colorWithRed:3/255.f green:213/255.f blue:42/255.f alpha:1.f]];
+    self.textViewRecStatus = [[NSTextView alloc]initWithFrame:NSMakeRect(0, 0, 176, 176)];
+    [self.textViewRecStatus setWantsLayer:YES];
+    [self.textViewRecStatus setBackgroundColor:[NSColor clearColor]];
+    [self.textViewRecStatus setTextColor:[NSColor colorWithRed:3/255.f green:213/255.f blue:42/255.f alpha:1.f]];
     //[self.textViewStatus setTextColor:[NSColor whiteColor]];
-    [self.textViewStatus setEditable:NO];
-    [self.textViewStatus setSelectable:NO];
-    [self.textViewStatus setString:NSLocalizedString(@"VIDEO_VIEW_RECORD_STATUS", nil)];
-    [self.textViewStatus setFont:[NSFont fontWithName:NSLocalizedString(@"GLOBAL_FONT_18_NAME", nil) size:NSLocalizedString(@"GLOBAL_FONT_18_SIZE", nil).intValue]];
-    [self addSubview:self.textViewStatus];
+    [self.textViewRecStatus setEditable:NO];
+    [self.textViewRecStatus setSelectable:NO];
+    [self.textViewRecStatus setString:NSLocalizedString(@"VIDEO_VIEW_RECORD_STATUS", nil)];
+    [self.textViewRecStatus setFont:[NSFont fontWithName:NSLocalizedString(@"GLOBAL_FONT_18_NAME", nil) size:NSLocalizedString(@"GLOBAL_FONT_18_SIZE", nil).intValue]];
+    [self addSubview:self.textViewRecStatus];
 }
 
 - (void)layoutSubViews {
@@ -93,7 +94,7 @@
         make.bottom.mas_equalTo(self.imageViewTime.mas_centerY).with.offset(12);
     }];
     
-    [self.textViewStatus mas_makeConstraints:^(MASConstraintMaker *make) {
+    [self.textViewRecStatus mas_makeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.imageViewTime).with.offset(-4);
         make.left.mas_equalTo(self.mas_right).with.offset(-130);
         make.right.mas_equalTo(self.mas_right).with.offset(-32);
@@ -156,6 +157,7 @@
     self.countBeginWithRedColor = red;
     self.countBeginWithRedColorWarning = warn;
     self.countEnd = end;
+    [self.textViewTime setBackgroundColor:[NSColor clearColor]];
     
     if (self.countEnd <= self.countBegin) {
         return;
@@ -183,6 +185,10 @@
 -(void)stopCount {
     [self.timerCount invalidate];
     [self setHidden:YES];
+}
+
+-(void)setRecStatusHidden:(BOOL)yesno {
+    [self.textViewRecStatus setHidden:yesno];
 }
 
 @end

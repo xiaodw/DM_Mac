@@ -11,8 +11,8 @@
 
 @interface LogData : ServerData
 + (instancetype)defaultLogData;
--(void)reportUserEnter:(NSString*)target Reporter:(NSString*)reporter LessonId:(NSString*)lessonId Token:(NSString*)token;
--(void)reportUserExit:(NSString*)target Reporter:(NSString*)reporter LessonId:(NSString*)lessonId Token:(NSString*)token;
--(void)reportNetError:(NSString*)target Reporter:(NSString*)reporter LessonId:(NSString*)lessonId Token:(NSString*)token;
+-(void)reportUserEnter:(NSString*)target Reporter:(NSString*)reporter MeetingId:(NSString*)meetingId Token:(NSString*)token;
+-(void)reportUserExit:(NSString*)target Reporter:(NSString*)reporter MeetingId:(NSString*)meetingId Token:(NSString*)token;
+-(void)reportNetError:(NSString*)target Reporter:(NSString*)reporter MeetingId:(NSString*)meetingId Token:(NSString*)token;
 @end
 

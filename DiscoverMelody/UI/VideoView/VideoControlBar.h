@@ -13,5 +13,6 @@
 -(void)setMuteAction:(SEL)action;
 -(void)setChangeLayoutAction:(SEL)action;
 -(void)setShareScreenAction:(SEL)action;
+-(void)setShareScreenEnable:(BOOL)yesno;
 @property BOOL isMouseHover;
 @end

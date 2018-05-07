@@ -54,7 +54,10 @@
 "ALERT_EXIT_LIVE_ROOM" = "Are you sure you want to end the session?";
 "ALERT_LIVE_AUTO_CLOSE" = "After confirmation, your session will be disconnected";
 "ALERT_UPDATE_TITLE" = "new version found";
-
+"ALERT_START_SHARE_SCREEN_TITLE" = "Are you sure you want to share screen";
+"ALERT_START_SHARE_SCREEN_MSG" = "After confirmation,your screen will be shared";
+"ALERT_STOP_SHARE_SCREEN_TITLE" = "Are you sure you want to end sharing scree";
+"ALERT_STOP_SHARE_SCREEN_MSG" = "After confirmation,your screen sharing will be ended";
 "OVERLAY_MSG_FONT_SIZE" = "16";
 "OVERLAY_MAX_WIDTH" = "400";
 "OVERLAY_MAX_HEIGHT" = "400";

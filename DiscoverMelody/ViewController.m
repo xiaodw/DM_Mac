@@ -37,6 +37,13 @@ enum APP_DATA_STATUS {
     APP_DATA_STATUS_HANDLED
 };
 
+enum USER_TYPE {
+    USER_TYPE_STUDENT = 0,
+    USER_TYPE_TEACHER,
+    USER_TYPE_ADMIN,
+    USER_TYPE_ASSISTANT
+};
+
 #define DM_GET_APP_CONFIG_DONE @"DmGetAppConfigDone"
 #define DM_HANDLE_APP_CONFIG_DONE @"DmHandleAppConfigDone"
 #define DMLOGIN_STEP_1_DONE @"DmLoginStep1Done"
@@ -55,7 +62,7 @@ enum APP_DATA_STATUS {
 @property (strong,nonatomic) NSString* userId;
 @property (strong,nonatomic) NSString* userType;
 @property (strong,nonatomic) NSString* userToken;
-@property (strong,nonatomic) NSString* lessonId;
+@property (strong,nonatomic) NSString* meetingId;
 @property (strong,nonatomic) NSString* lessonCode;
 @property (strong,nonatomic) NSString* lessonStartTime;
 @property (strong,nonatomic) NSString* lessonDuration;
@@ -63,11 +70,19 @@ enum APP_DATA_STATUS {
 @property (strong,nonatomic) NSString* lessonForceClose;
 @property (strong,nonatomic) NSString* agoraAppId;
 @property NSInteger agoraVideoProfile;
+@property NSInteger playVolume;
+@property NSInteger recordVolume;
+@property NSInteger audioScenario;
+@property NSInteger audioProfile;
+@property BOOL enableScreenSharing;
+@property BOOL enableShowRecodingStatus;
 @property (strong,nonatomic) NSString* signalKey;
 @property (strong,nonatomic) NSString* channelKey;
 @property (strong,nonatomic) NSString* channelName;
 @property (strong,nonatomic) NSString* channelUidMine;
-@property (strong,nonatomic) NSString* channelUidOther;
+@property (strong,nonatomic) NSString* channelUidStudent;
+@property (strong,nonatomic) NSString* channelUidTeacher;
+@property (strong,nonatomic) NSString* channelUidAssistant;
 
 @property (strong,nonatomic) NSString* updateType;
 @property (strong,nonatomic) NSString* updateVer;
@@ -127,7 +142,7 @@ enum APP_DATA_STATUS {
 }
 
 - (void)mouseDown:(NSEvent *)theEvent {
-    NSRect smallRect = self.videoView.smallVideoCanvas.frame;
+    NSRect smallRect = self.videoView.videoCanvasStudent.frame;
     CGFloat x = theEvent.locationInWindow.x;
     CGFloat y = theEvent.locationInWindow.y;
     if (x > smallRect.origin.x && x < smallRect.origin.x + smallRect.size.width &&
@@ -204,6 +219,8 @@ enum APP_DATA_STATUS {
 
 #pragma mark ### setup and layout subviews ###
 -(void)loadLatestConfig {
+    self.enableScreenSharing = NO;
+    self.enableShowRecodingStatus = NO;
     self.agoraAppId = [[AppData defaultAppData] getAgoraAppId];
     self.agoraVideoProfile = [[AppData defaultAppData]getAgoraVideoProfile];
 }
@@ -291,7 +308,7 @@ enum APP_DATA_STATUS {
 #pragma mark ###  actions ###
 -(void)countDownClockStopped:(id)sender {
     NSLog(@"countDownClockStopped");
-    [self.videoView.largeVideoCanvas setPlaceHolderHidden:[self.videoView.largeVideoCanvas getVideoViewMode]];
+    [self.videoView.videoCanvasTeacher setPlaceHolderHidden:[self.videoView.videoCanvasTeacher getUserOnline]];
 }
 
 -(void)lessonEndReached:(id)sender {
@@ -335,18 +352,23 @@ enum APP_DATA_STATUS {
 }
 
 -(void)buttonScreenShareClicked:(id)sender {
-    [self toggleScreenShare];
+    [self alertMsg:self.screenShare ? NSLocalizedString(@"ALERT_STOP_SHARE_SCREEN_MSG", nil) : NSLocalizedString(@"ALERT_START_SHARE_SCREEN_MSG", nil)
+             Title:self.screenShare ? NSLocalizedString(@"ALERT_STOP_SHARE_SCREEN_TITLE", nil) : NSLocalizedString(@"ALERT_START_SHARE_SCREEN_TITLE", nil) ButtonOk:NSLocalizedString(@"ALERT_BUTTON_OK", nil) ButtonCancel:NSLocalizedString(@"ALERT_BUTTON_CANCEL", nil) OnOk:^{
+        [self toggleScreenShare];
+    } OnCancel:^{
+        
+    }];
 }
 
 -(void)switchVieo {
     if (self.localSmall) {
         self.localSmall = NO;
-        self.localVideoCanvas.view = self.videoView.largeVideoCanvas.videoView;
-        self.remoteVideoCanvas.view = self.videoView.smallVideoCanvas.videoView;
+        self.localVideoCanvas.view = self.videoView.videoCanvasTeacher.videoView;
+        self.remoteVideoCanvas.view = self.videoView.videoCanvasStudent.videoView;
     } else {
         self.localSmall = YES;
-        self.localVideoCanvas.view = self.videoView.smallVideoCanvas.videoView;
-        self.remoteVideoCanvas.view = self.videoView.largeVideoCanvas.videoView;
+        self.localVideoCanvas.view = self.videoView.videoCanvasStudent.videoView;
+        self.remoteVideoCanvas.view = self.videoView.videoCanvasTeacher.videoView;
     }
     
     //[self.agoraKit setupLocalVideo:self.localVideoCanvas];
@@ -395,7 +417,6 @@ enum APP_DATA_STATUS {
         
         NSDictionary* dataObj = [responseObj objectForKey:@"data"];
         self.agoraAppId = [dataObj objectForKey:@"agoraAppId"];
-        self.agoraVideoProfile = [[dataObj objectForKey:@"agoraVideoProfile"]integerValue];
         
         NSDictionary* appObj = [dataObj objectForKey:@"app"];
         self.updateType = [appObj objectForKey:@"update"];
@@ -435,9 +456,19 @@ enum APP_DATA_STATUS {
         
         NSDictionary* dataObj = [responseObj objectForKey:@"data"];
         self.userToken = [dataObj objectForKey:@"token"];
-        self.lessonId = [dataObj objectForKey:@"lesson_id"];
+        self.meetingId = [dataObj objectForKey:@"meeting_id"];
         self.userId = [dataObj objectForKey:@"user_id"];
         self.userType = [dataObj objectForKey:@"user_type"];
+        
+        NSDictionary* configObj = [dataObj objectForKey:@"config"];
+        self.agoraVideoProfile = [[configObj objectForKey:@"agoraVideoProfile"]integerValue];
+        self.enableScreenSharing = [[configObj objectForKey:@"screen_sharing"]boolValue];
+        self.enableShowRecodingStatus = [[configObj objectForKey:@"recording"]boolValue];
+        
+        [self.videoView setUserTypeMine:self.userType.integerValue];
+        
+        [self.videoView.statusBar setRecStatusHidden:!self.enableScreenSharing];
+        [self.videoView.controlBar setShareScreenEnable:self.enableScreenSharing];
         
         [[NSNotificationCenter defaultCenter]postNotificationName:DMLOGIN_STEP_1_DONE object:@"success"];
     } failure:^(NSError *error) {
@@ -445,12 +476,19 @@ enum APP_DATA_STATUS {
     }];
 }
 
--(void)getLessonInfoById:(NSString*)lessonId withToken:(NSString*)token andUserType:(NSString*)type {
+-(void)getMeetingInfoById:(NSString*)meetingId withToken:(NSString*)token andUserType:(NSString*)type {
     NSMutableDictionary *dic = [self buildCommonRequestField];
     dic[@"token"] = token;
-    dic[@"lesson_id"] = lessonId;
+    dic[@"meeting_id"] = meetingId;
     
-    NSString* requestUrl = (0 == type.intValue) ? URL_GET_LESSON_INFO_STUDENT : URL_GET_LESSON_INFO_TEACHER;
+    NSString* requestUrl = @"";
+    if (0 == type.intValue) {
+        requestUrl = URL_GET_LESSON_INFO_STUDENT;
+    } else if (1 == type.intValue) {
+        requestUrl = URL_GET_LESSON_INFO_TEACHER;
+    } else { //if (2 == type.intValue) {
+        requestUrl = URL_GET_LESSON_INFO_ASSISTANT;
+    }
     
     [[DMRequestModel sharedInstance]requestWithPath:requestUrl method:DMHttpRequestPost parameters:dic prepareExecute:^{
     } success:^(id responseObject) {
@@ -476,11 +514,17 @@ enum APP_DATA_STATUS {
         self.channelKey = [dataObj objectForKey:@"channel_key"];
         self.channelName = [dataObj objectForKey:@"channel_name"];
         self.channelUidMine = [dataObj objectForKey:@"uid"];
-        self.channelUidOther = [dataObj objectForKey:@"other_uid"];
+        self.channelUidStudent = [dataObj objectForKey:@"student_id"];
+        self.channelUidTeacher = [dataObj objectForKey:@"teacher_id"];
+        self.channelUidAssistant = [dataObj objectForKey:@"assistant_id"];
         self.lessonStartTime = [dataObj objectForKey:@"start_time"];
         self.lessonDuration = [dataObj objectForKey:@"duration"];
         self.lessonCountDown = [dataObj objectForKey:@"countdown"];
         self.lessonForceClose = [dataObj objectForKey:@"forceclose"];
+        self.playVolume = [[dataObj objectForKey:@"play_volume"]integerValue];
+        self.recordVolume = [[dataObj objectForKey:@"record_volume"]integerValue];
+        self.audioScenario = [[dataObj objectForKey:@"audio_scenario"]integerValue];
+        self.audioProfile = [[dataObj objectForKey:@"audio_profile"]integerValue];
 
         [[NSNotificationCenter defaultCenter]postNotificationName:DMLOGIN_STEP_2_DONE object:@"success"];
     } failure:^(NSError *error) {
@@ -524,12 +568,13 @@ enum APP_DATA_STATUS {
         //[self.loginView setLoginStatus:LOGIN_STATUS_READY];
         [self buttonLoginClicked:self];
     }
+    
     self.appDataStatus = APP_DATA_STATUS_HANDLED;
 }
 
 -(void)loginStep1Done:(NSNotification *)notification {
     if ([@"success" isEqualToString:notification.object]) {
-        [self getLessonInfoById:self.lessonId withToken:self.userToken andUserType:self.userType];
+        [self getMeetingInfoById:self.meetingId withToken:self.userToken andUserType:self.userType];
     } else {
         [self startOverlay:notification.object];
         [self.loginView setLoginStatus:LOGIN_STATUS_NOT_READY];
@@ -541,18 +586,21 @@ enum APP_DATA_STATUS {
         if (self.channelName.length  > 0 &&
             self.channelKey.length > 0 &&
             self.channelUidMine > 0 &&
-            self.channelUidOther > 0) {
+            self.channelUidStudent > 0 &&
+            self.channelUidTeacher > 0 &&
+            self.channelUidAssistant > 0) {
             [self setupLocalVideo];
             [self joinChannel];
+            self.screenShare = NO;
             [self.loginView setLoginStatus:LOGIN_STATUS_DONE];
             [self changeViewStatus:VIEW_STATUS_VIDEO];
         
             NSDate* dataNow = [[NSDate alloc]init];
             NSTimeInterval intervalSince1970 = [dataNow timeIntervalSince1970];
             if (self.lessonStartTime.doubleValue > intervalSince1970) {
-                [self.videoView.countDownClock startCountDownUntil:self.lessonStartTime.doubleValue];
-                [self.videoView.countDownClock setStopAction:@selector(countDownClockStopped:) withTarget:self];
-                [self.videoView.largeVideoCanvas setPlaceHolderHidden:YES];
+                [self.videoView startCountDownUntil:self.lessonStartTime.doubleValue];
+                [self.videoView setStopAction:@selector(countDownClockStopped:) withTarget:self];
+                [self.videoView.videoCanvasTeacher setPlaceHolderHidden:YES];
             }
             
             double utcBegin = self.lessonStartTime.doubleValue;
@@ -579,8 +627,33 @@ enum APP_DATA_STATUS {
 }
 
 #pragma mark ### Agora operate detail ###
+-(void)updateUser:(NSUInteger)userId OnlineStatus:(BOOL)yesno {
+    NSLog(@"updateUser %lu %d", (unsigned long)userId, yesno);
+    if (userId == self.channelUidStudent.integerValue) {
+        [self.videoView.videoCanvasStudent setUserOnline:yesno];
+    } else if (userId == self.channelUidTeacher.integerValue) {
+        [self.videoView.videoCanvasTeacher setUserOnline:yesno];
+    } else if (userId == self.channelUidAssistant.integerValue) {
+        [self.videoView.videoCanvasAssistant setUserOnline:yesno];
+    }
+}
+
+-(NSView*)canvasViewForUser:(NSUInteger)userId {
+    if (userId == self.channelUidStudent.integerValue) {
+        return self.videoView.videoCanvasStudent.videoView;
+    } else if (userId == self.channelUidTeacher.integerValue) {
+        return self.videoView.videoCanvasTeacher.videoView;
+    } else if (userId == self.channelUidAssistant.integerValue) {
+        return self.videoView.videoCanvasAssistant.videoView;
+    }
+    return nil;
+}
+
 - (void)initializeAgoraEngine {
     self.agoraKit = [AgoraRtcEngineKit sharedEngineWithAppId:self.agoraAppId delegate:self];
+    [self.agoraKit adjustPlaybackSignalVolume:self.playVolume];
+    [self.agoraKit adjustRecordingSignalVolume:self.recordVolume];
+    [self.agoraKit setAudioProfile:self.audioProfile scenario:self.audioScenario];
 }
 
 - (void)setupVideo {
@@ -592,59 +665,81 @@ enum APP_DATA_STATUS {
     AgoraRtcVideoCanvas *videoCanvas = [[AgoraRtcVideoCanvas alloc] init];
     videoCanvas.uid = 0;
     // UID = 0 means we let Agora pick a UID for us
-    videoCanvas.view = self.videoView.smallVideoCanvas.videoView;
-    videoCanvas.renderMode = AgoraRtc_Render_Adaptive;
+    
+    // 0-学生，1-老师，2-管理员，3-助教
+    if (USER_TYPE_STUDENT == self.userType.intValue) {
+        [self.videoView.videoCanvasStudent setUserOnline:YES];
+        videoCanvas.view = self.videoView.videoCanvasStudent.videoView;
+    } else if (USER_TYPE_TEACHER == self.userType.intValue) {
+        [self.videoView.videoCanvasTeacher setUserOnline:YES];
+        videoCanvas.view = self.videoView.videoCanvasTeacher.videoView;
+    } else if (USER_TYPE_ASSISTANT == self.userType.integerValue) {
+        [self.videoView.videoCanvasAssistant setUserOnline:YES];
+        videoCanvas.view = self.videoView.videoCanvasAssistant.videoView;
+    }
+    //videoCanvas.view = self.videoView.videoCanvasStudent.videoView;
+    
+    videoCanvas.renderMode = AgoraRtc_Render_Fit;
     [self.agoraKit setupLocalVideo:videoCanvas];
     // Bind local video stream to view
 }
 
 - (void)joinChannel {
     [self.agoraKit joinChannelByKey:self.channelKey channelName:self.channelName info:nil uid:self.userId.integerValue joinSuccess:^(NSString *channel, NSUInteger uid, NSInteger elapsed) {
-        [self.videoView.smallVideoCanvas setVideoViewMode:YES];
+        [self updateUser:self.userId.integerValue OnlineStatus:YES];
     }];
     
-    [[LogData defaultLogData]reportUserEnter:self.channelUidMine Reporter:self.channelUidMine LessonId:self.lessonId Token:self.userToken];
+    [[LogData defaultLogData]reportUserEnter:self.channelUidMine Reporter:self.channelUidMine MeetingId:self.meetingId Token:self.userToken];
 }
 
 - (void)rtcEngine:(AgoraRtcEngineKit *)engine firstRemoteVideoDecodedOfUid:(NSUInteger)uid size: (CGSize)size elapsed:(NSInteger)elapsed {
-    if (uid != self.channelUidOther.intValue) {
+    if (uid != self.channelUidStudent.intValue &&
+        uid != self.channelUidTeacher.integerValue &&
+        uid != self.channelUidAssistant.integerValue) {
         return;
     }
     
-    if (self.videoView.largeVideoCanvas.videoView.hidden) {
-        self.videoView.largeVideoCanvas.videoView.hidden = false;
-    }
     AgoraRtcVideoCanvas *videoCanvas = [[AgoraRtcVideoCanvas alloc] init];
     videoCanvas.uid = uid;
-    [self.videoView.largeVideoCanvas setVideoViewMode:YES];
-    videoCanvas.view = self.videoView.largeVideoCanvas.videoView;
-    videoCanvas.renderMode = AgoraRtc_Render_Adaptive;
+    videoCanvas.view = [self canvasViewForUser:uid];
+    videoCanvas.renderMode = AgoraRtc_Render_Fit;
     [self.agoraKit setupRemoteVideo:videoCanvas];
+    
+    [self updateUser:uid OnlineStatus:YES];
+    [self.videoView invalidateViewLayout];
 }
 
 - (void)leaveChannel {
     [self.agoraKit leaveChannel:nil];
     [self.agoraKit setupLocalVideo:nil];
-    [self.videoView.smallVideoCanvas setVideoViewMode:NO];
-    [self.videoView.largeVideoCanvas setVideoViewMode:NO];
+    
+    [self.videoView.videoCanvasStudent setUserOnline:NO];
+    [self.videoView.videoCanvasTeacher setUserOnline:NO];
+    [self.videoView.videoCanvasAssistant setUserOnline:NO];
     //self.agoraKit = nil;
-    [[LogData defaultLogData]reportUserExit:self.channelUidMine Reporter:self.channelUidMine LessonId:self.lessonId Token:self.userToken];
+    [[LogData defaultLogData]reportUserExit:self.channelUidMine Reporter:self.channelUidMine MeetingId:self.meetingId Token:self.userToken];
 }
 
 - (void)rtcEngineConnectionDidInterrupted:(AgoraRtcEngineKit *)engine {
-    [[LogData defaultLogData]reportUserEnter:self.channelUidMine Reporter:self.channelUidMine LessonId:self.lessonId Token:self.userToken];
+    [[LogData defaultLogData]reportNetError:self.channelUidMine Reporter:self.channelUidMine MeetingId:self.meetingId Token:self.userToken];
 }
 
 - (void)rtcEngine:(AgoraRtcEngineKit *)engine didJoinedOfUid:(NSUInteger)uid elapsed:(NSInteger)elapsed {
-    [[LogData defaultLogData]reportUserEnter:[NSString stringWithFormat:@"%lu",uid] Reporter:self.channelUidMine LessonId:self.lessonId Token:self.userToken];
+    [[LogData defaultLogData]reportUserEnter:[NSString stringWithFormat:@"%lu",uid] Reporter:self.channelUidMine MeetingId:self.meetingId Token:self.userToken];
 }
 
 - (void)rtcEngine:(AgoraRtcEngineKit *)engine didOfflineOfUid:(NSUInteger)uid reason:(AgoraRtcUserOfflineReason)reason {
-    [self.videoView.largeVideoCanvas setVideoViewMode:NO];
-    if (COUNT_DOWN_STATUS_STARTED == self.videoView.countDownClock.getCountDownStatus) {
-        [self.videoView.largeVideoCanvas setPlaceHolderHidden:YES];
-    }
-    [[LogData defaultLogData]reportUserExit:[NSString stringWithFormat:@"%lu",uid] Reporter:self.channelUidMine LessonId:self.lessonId Token:self.userToken];
+    
+    AgoraRtcVideoCanvas *videoCanvas = [[AgoraRtcVideoCanvas alloc] init];
+    videoCanvas.uid = uid;
+    videoCanvas.view = nil;
+    videoCanvas.renderMode = AgoraRtc_Render_Fit;
+    [self.agoraKit setupRemoteVideo:videoCanvas];
+    
+    [self updateUser:uid OnlineStatus:NO];
+    [self.videoView invalidateViewLayout];
+    
+    [[LogData defaultLogData]reportUserExit:[NSString stringWithFormat:@"%lu",uid] Reporter:self.channelUidMine MeetingId:self.meetingId Token:self.userToken];
 }
 
 @end

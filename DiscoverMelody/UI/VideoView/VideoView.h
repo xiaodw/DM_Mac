@@ -19,10 +19,20 @@ enum LAYOUT_MODE {
 };
 
 @interface VideoView : NSView
-@property (strong,nonatomic) VideoCanvas* smallVideoCanvas;
-@property (strong,nonatomic) VideoCanvas* largeVideoCanvas;
+@property (strong,nonatomic) VideoCanvas* videoCanvasStudent;
+@property (strong,nonatomic) VideoCanvas* videoCanvasTeacher;
+@property (strong,nonatomic) VideoCanvas* videoCanvasAssistant;
 @property (strong,nonatomic) VideoControlBar* controlBar;
-@property (strong,nonatomic) CountDownClock* countDownClock;
+
 @property (strong,nonatomic) VideoStatusBar* statusBar;
+-(void)setUserTypeMine:(NSInteger)type;
+-(void)setAssistantOnline:(BOOL)yesno;
+-(void)setTeacherOnline:(BOOL)yesno;
+-(void)setStudentOnline:(BOOL)yesno;
 -(void)changeViewLayoutMode;
+-(void)invalidateViewLayout;
+// -- interface for countdown --
+-(void)startCountDownUntil:(double)utcEnd;
+-(void)setStopAction:(SEL)action withTarget:(id)target;
+
 @end

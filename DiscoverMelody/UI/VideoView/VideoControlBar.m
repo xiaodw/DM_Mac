@@ -58,7 +58,6 @@
     self.buttonHangup.bordered = NO;
     self.buttonHangup.imageScaling = YES;
     [self.buttonHangup setImage:[NSImage imageNamed:@"hangUpButton"]];
-    //[self.buttonHangup setAction:@selector(buttonHangupClicked:)];
     [self addSubview:self.buttonHangup];
     
     self.buttonChangeLayout = [[NSButton alloc]initWithFrame:CGRectMake(128, 0, 64, 64)];
@@ -68,19 +67,17 @@
     self.buttonChangeLayout.bordered = NO;
     self.buttonChangeLayout.imageScaling = YES;
     [self.buttonChangeLayout setImage:[NSImage imageNamed:@"changeLayoutButton"]];
-    //[buttonChangeLayout setAction:@selector(buttonHangupClicked:)];
     [self addSubview:self.buttonChangeLayout];
-    /*
+    
     self.buttonShareScreen = [[NSButton alloc]initWithFrame:CGRectMake(128, 0, 64, 64)];
+    [self.buttonShareScreen setHidden:YES]; // 默认隐藏
     [self.buttonShareScreen setButtonType:NSButtonTypeMomentaryPushIn];
     [self.buttonShareScreen setBezelStyle:NSRoundedBezelStyle];
     [self.buttonShareScreen setTitle:@"屏幕共享"];
     self.buttonShareScreen.bordered = NO;
     self.buttonShareScreen.imageScaling = YES;
     [self.buttonShareScreen setImage:[NSImage imageNamed:@"screenShareButton"]];
-    //[buttonChangeLayout setAction:@selector(buttonHangupClicked:)];
     [self addSubview:self.buttonShareScreen];
-     */
 }
 
 -(void)layoutSubViews {
@@ -88,35 +85,51 @@
     //__block CGFloat ctlWidth = 64;
     //__block CGFloat ctlHeight = 64;
     
-    [self.buttonHangup mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.mas_top).with.offset(60);
-        make.left.mas_equalTo(self.mas_centerX).with.offset(-110);
-        make.width.mas_equalTo(80);
-        make.height.mas_equalTo(80);
-    }];
-    
-    [self.buttonChangeLayout mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.mas_top).with.offset(60);
-        make.left.mas_equalTo(self.mas_centerX).with.offset(30);
-        make.width.mas_equalTo(80);
-        make.height.mas_equalTo(80);
-    }];
-    
-    /*
-    [self.buttonMute mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.mas_top);
-        make.left.mas_equalTo(self.buttonChangeLayout.mas_right).with.offset(ctlInterval);
-        make.width.mas_equalTo(ctlWidth);
-        make.height.mas_equalTo(ctlHeight);
-    }];
-    
-    [self.buttonShareScreen mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.mas_top);
-        make.left.mas_equalTo(self.buttonMute.mas_right).with.offset(ctlInterval);
-        make.width.mas_equalTo(ctlWidth);
-        make.height.mas_equalTo(ctlHeight);
-    }];
-    */
+    if ([self.buttonShareScreen isHidden]) {
+        [self.buttonChangeLayout mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.mas_top).with.offset(60);
+            make.left.mas_equalTo(self.mas_centerX).with.offset(30);
+            make.width.mas_equalTo(80);
+            make.height.mas_equalTo(80);
+        }];
+        
+        [self.buttonHangup mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.mas_top).with.offset(60);
+            make.right.mas_equalTo(self.mas_centerX).offset(-30);
+            make.width.mas_equalTo(80);
+            make.height.mas_equalTo(80);
+        }];
+    } else {
+        [self.buttonChangeLayout mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.mas_top).with.offset(60);
+            make.left.mas_equalTo(self.mas_centerX).with.offset(-40);
+            make.width.mas_equalTo(80);
+            make.height.mas_equalTo(80);
+        }];
+        
+        [self.buttonHangup mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.mas_top).with.offset(60);
+            make.left.mas_equalTo(self.buttonChangeLayout.mas_left).offset(-140);
+            make.width.mas_equalTo(80);
+            make.height.mas_equalTo(80);
+        }];
+        
+        /*
+        [self.buttonMute mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.mas_top).with.offset(60);
+            make.left.mas_equalTo(self.buttonChangeLayout.mas_right).with.offset(60);
+            make.width.mas_equalTo(80);
+            make.height.mas_equalTo(80);
+        }];
+        */
+        
+        [self.buttonShareScreen mas_remakeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.mas_top).with.offset(60);
+            make.left.mas_equalTo(self.buttonChangeLayout.mas_right).with.offset(60);
+            make.width.mas_equalTo(80);
+            make.height.mas_equalTo(80);
+        }];
+    }
 }
 
 -(void)setHangupAction:(SEL)action {
@@ -156,6 +169,11 @@
 - (void)mouseExited:(NSEvent *)theEvent {
     self.isMouseHover = NO;
     //NSLog(@"-->mouseExited");
+}
+
+-(void)setShareScreenEnable:(BOOL)yesno {
+    [self.buttonShareScreen setHidden:!yesno];
+    [self layoutSubViews];
 }
 
 @end

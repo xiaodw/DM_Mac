@@ -2,8 +2,8 @@
 /* Class = "NSMenuItem"; title = "Customize Toolbar…"; ObjectID = "1UK-8n-QPP"; */
 "1UK-8n-QPP.title" = "Customize Toolbar…";
 
-/* Class = "NSMenuItem"; title = "DiscoverMelody"; ObjectID = "1Xt-HY-uBw"; */
-"1Xt-HY-uBw.title" = "寻律";
+/* Class = "NSMenuItem"; title = "WeEducation"; ObjectID = "1Xt-HY-uBw"; */
+"1Xt-HY-uBw.title" = "WeEducation";
 
 /* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; */
 "1b7-l0-nxx.title" = "Find";
@@ -35,8 +35,8 @@
 /* Class = "NSMenuItem"; title = "Enter Full Screen"; ObjectID = "4J7-dP-txa"; */
 "4J7-dP-txa.title" = "进入全屏";
 
-/* Class = "NSMenuItem"; title = "Quit DiscoverMelody"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "退出 寻律";
+/* Class = "NSMenuItem"; title = "Quit WeEducation"; ObjectID = "4sb-4s-VLi"; */
+"4sb-4s-VLi.title" = "退出 WeEducation";
 
 /* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
 "5QF-Oa-p0T.title" = "编辑";
@@ -44,8 +44,8 @@
 /* Class = "NSMenuItem"; title = "Copy Style"; ObjectID = "5Vv-lz-BsD"; */
 "5Vv-lz-BsD.title" = "Copy Style";
 
-/* Class = "NSMenuItem"; title = "About DiscoverMelody"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "关于 寻律";
+/* Class = "NSMenuItem"; title = "About WeEducation"; ObjectID = "5kV-Vb-QxS"; */
+"5kV-Vb-QxS.title" = "关于 WeEducation";
 
 /* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
 "6dh-zS-Vam.title" = "重做";
@@ -86,8 +86,8 @@
 /* Class = "NSMenu"; title = "Help"; ObjectID = "F2S-fz-NVQ"; */
 "F2S-fz-NVQ.title" = "帮助";
 
-/* Class = "NSMenuItem"; title = "DiscoverMelody Help"; ObjectID = "FKE-Sm-Kum"; */
-"FKE-Sm-Kum.title" = "寻律 帮助";
+/* Class = "NSMenuItem"; title = "WeEducation Help"; ObjectID = "FKE-Sm-Kum"; */
+"FKE-Sm-Kum.title" = "WeEducation 帮助";
 
 /* Class = "NSMenuItem"; title = "Text"; ObjectID = "Fal-I4-PZk"; */
 "Fal-I4-PZk.title" = "Text";
@@ -129,7 +129,7 @@
 "IAo-SY-fd9.title" = "打开…";
 
 /* Class = "NSWindow"; title = "Window"; ObjectID = "IQv-IB-iLA"; */
-"IQv-IB-iLA.title" = "寻律";
+"IQv-IB-iLA.title" = "WeEducation";
 
 /* Class = "NSMenuItem"; title = "Justify"; ObjectID = "J5U-5w-g23"; */
 "J5U-5w-g23.title" = "Justify";
@@ -167,8 +167,8 @@
 /* Class = "NSMenuItem"; title = "Baseline"; ObjectID = "OaQ-X3-Vso"; */
 "OaQ-X3-Vso.title" = "Baseline";
 
-/* Class = "NSMenuItem"; title = "Hide DiscoverMelody"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "隐藏 寻律";
+/* Class = "NSMenuItem"; title = "Hide WeEducation"; ObjectID = "Olw-nP-bQN"; */
+"Olw-nP-bQN.title" = "隐藏 WeEducation";
 
 /* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "OwM-mh-QMV"; */
 "OwM-mh-QMV.title" = "查找上一个";
@@ -359,8 +359,8 @@
 /* Class = "NSMenu"; title = "Kern"; ObjectID = "tlD-Oa-oAM"; */
 "tlD-Oa-oAM.title" = "Kern";
 
-/* Class = "NSMenu"; title = "DiscoverMelody"; ObjectID = "uQy-DD-JDr"; */
-"uQy-DD-JDr.title" = "寻律";
+/* Class = "NSMenu"; title = "WeEducation"; ObjectID = "uQy-DD-JDr"; */
+"uQy-DD-JDr.title" = "WeEducation";
 
 /* Class = "NSMenuItem"; title = "Cut"; ObjectID = "uRl-iY-unG"; */
 "uRl-iY-unG.title" = "剪切";

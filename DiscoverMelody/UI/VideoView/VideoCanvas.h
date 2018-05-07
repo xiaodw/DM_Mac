@@ -9,10 +9,14 @@
 #import <Cocoa/Cocoa.h>
 
 @interface VideoCanvas : NSView
+
 @property (strong, nonatomic) NSView *videoView; // 播放的view
 @property (strong, nonatomic) NSImageView *placeholderView; // 占位图标
 -(void)setPlaceHolderHidden:(BOOL)hidden;
 -(BOOL)getPlaceHolderHidden;
--(void)setVideoViewMode:(BOOL)yesno;
--(BOOL)getVideoViewMode;
+-(void)setUserOnline:(BOOL)yesno;
+-(BOOL)getUserOnline;
+-(void)setShowBoarder:(BOOL)yesno;
+-(BOOL)getShowBoarder;
+-(void)setClickAction:(SEL)action withTarget:(id)target;
 @end

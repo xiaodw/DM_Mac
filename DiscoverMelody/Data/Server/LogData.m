@@ -52,30 +52,30 @@ static LogData *defaultLogData = nil;
     }];
 }
 
--(void)reportUserEnter:(NSString*)target Reporter:(NSString*)reporter LessonId:(NSString*)lessonId Token:(NSString*)token {
+-(void)reportUserEnter:(NSString*)target Reporter:(NSString*)reporter MeetingId:(NSString*)meetingId Token:(NSString*)token {
     NSMutableDictionary *dic = [self buildCommonRequestField];
     dic[@"token"] = token;
-    dic[@"lesson_id"] = lessonId;
+    dic[@"meeting_id"] = meetingId;
     dic[@"target_uid"] = target;
     dic[@"upload_uid"] = reporter;
     dic[@"action"] = @"enter";
     [self reportWithParams:dic];
 }
 
--(void)reportUserExit:(NSString*)target Reporter:(NSString*)reporter LessonId:(NSString*)lessonId Token:(NSString*)token {
+-(void)reportUserExit:(NSString*)target Reporter:(NSString*)reporter MeetingId:(NSString*)meetingId Token:(NSString*)token {
     NSMutableDictionary *dic = [self buildCommonRequestField];
     dic[@"token"] = token;
-    dic[@"lesson_id"] = lessonId;
+    dic[@"meeting_id"] = meetingId;
     dic[@"target_uid"] = target;
     dic[@"upload_uid"] = reporter;
     dic[@"action"] = @"exit";
     [self reportWithParams:dic];
 }
 
--(void)reportNetError:(NSString*)target Reporter:(NSString*)reporter LessonId:(NSString*)lessonId Token:(NSString*)token {
+-(void)reportNetError:(NSString*)target Reporter:(NSString*)reporter MeetingId:(NSString*)meetingId Token:(NSString*)token {
     NSMutableDictionary *dic = [self buildCommonRequestField];
     dic[@"token"] = token;
-    dic[@"lesson_id"] = lessonId;
+    dic[@"meeting_id"] = meetingId;
     dic[@"target_uid"] = target;
     dic[@"upload_uid"] = reporter;
     dic[@"action"] = @"neterr";
