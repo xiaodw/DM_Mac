@@ -12,6 +12,7 @@
 @interface VideoCanvas()
 @property BOOL isShowBoarder;
 @property BOOL isUserOnline;
+@property NSSize videoSize;
 @property (nullable, weak) id target;
 @property (nullable) SEL action;
 @end;
@@ -118,6 +119,14 @@
 
 -(BOOL)getUserOnline {
     return self.isUserOnline;
+}
+
+-(void)setVideoSize:(NSSize)size {
+    _videoSize = size;
+}
+
+-(NSSize)getVideoSize {
+    return _videoSize;
 }
 
 -(void)setShowBoarder:(BOOL)yesno {

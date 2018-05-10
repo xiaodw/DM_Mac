@@ -196,6 +196,16 @@ enum CANVAS_TYPE_ {
     [self setupControlBar];
 }
 
+-(int)getOnlineUserCount {
+    int onlineUserCount = 0;
+    for (int i = 0; i < [self.slCanvasArray count]; i++) {
+        if ([[self.slCanvasArray objectAtIndex:i]getUserOnline]) {
+            onlineUserCount++;
+        }
+    }
+    return onlineUserCount;
+}
+
 -(void)layoutSmallLargeView {
     __block int viewWidth = [[NSNumber numberWithFloat:self.frame.size.width] intValue];
     __block int viewHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
@@ -239,7 +249,6 @@ enum CANVAS_TYPE_ {
     [[self.slCanvasArray objectAtIndex:2]setShowBoarder:YES];
     
     enum COUNT_DOWN_STATUS countDownStatus = [self.countDownClock getCountDownStatus];
-    
     NSLog(@"layoutSmallLargeView  ---> countDownStatus:%d teacher:%d assistant:%d student:%d", countDownStatus, [self.videoCanvasTeacher getUserOnline], [self.videoCanvasAssistant getUserOnline], [self.videoCanvasStudent getUserOnline]);
     
     if (![[self.slCanvasArray objectAtIndex:1]getUserOnline] || [[self.slCanvasArray objectAtIndex:0]getUserOnline]) {
@@ -254,7 +263,7 @@ enum CANVAS_TYPE_ {
     } else {
         [[self.slCanvasArray objectAtIndex:0]setHidden:YES];
     }
-    
+
     if ([[self.slCanvasArray objectAtIndex:1]getUserOnline]) {
         if ([[self.slCanvasArray objectAtIndex:0]getUserOnline]) {
             [[self.slCanvasArray objectAtIndex:1] mas_remakeConstraints:^(MASConstraintMaker *make) {
@@ -294,61 +303,9 @@ enum CANVAS_TYPE_ {
     }
     [[self.slCanvasArray objectAtIndex:2] setPlaceHolderHidden:[[self.slCanvasArray objectAtIndex:2] getUserOnline]];
     [[self.slCanvasArray objectAtIndex:2] setHidden:[[self.slCanvasArray objectAtIndex:1]getUserOnline] && ![[self.slCanvasArray objectAtIndex:2]getUserOnline]];
-   
-//    if (self.isOtherOnline || !self.isAssistantOnline) {
-//        [self.videoCanvasOther setHidden:NO];
-//
-//        [self.videoCanvasOther mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(self.mas_top).with.offset(verticalOffset);
-//            make.left.mas_equalTo(self.mas_left).with.offset(horizontalOffset);
-//            make.width.mas_equalTo(videoWidth);
-//            make.height.mas_equalTo(videoHeight);
-//        }];
-//        [self.videoCanvasOther setPlaceHolderHidden:[self.videoCanvasOther getVideoViewMode] || COUNT_DOWN_STATUS_STARTED == [self.countDownClock getCountDownStatus]];
-//    } else {
-//        [self.videoCanvasOther setHidden:YES];
-//    }
-//
-//    if (self.isAssistantOnline) {
-//        [self.videoCanvasAssistant setHidden:NO];
-//
-//        if (self.isOtherOnline) {
-//            [self.videoCanvasAssistant mas_remakeConstraints:^(MASConstraintMaker *make) {
-//                make.top.mas_equalTo(self.videoCanvasOther.mas_top).with.offset(10);
-//                make.left.mas_equalTo(self.videoCanvasOther.mas_right).with.offset(-videoWidth / 4 - 10);
-//                make.width.mas_equalTo(videoWidth / 4);
-//                make.height.mas_equalTo(videoHeight / 4);
-//            }];
-//        } else {
-//            [self.videoCanvasAssistant mas_remakeConstraints:^(MASConstraintMaker *make) {
-//                make.top.mas_equalTo(self.mas_top).with.offset(verticalOffset);
-//                make.left.mas_equalTo(self.mas_left).with.offset(horizontalOffset);
-//                make.width.mas_equalTo(videoWidth);
-//                make.height.mas_equalTo(videoHeight);
-//            }];
-//            [self.videoCanvasAssistant setPlaceHolderHidden:[self.videoCanvasAssistant getVideoViewMode] || COUNT_DOWN_STATUS_STARTED == [self.countDownClock getCountDownStatus]];
-//        }
-//    } else {
-//        [self.videoCanvasAssistant setHidden:YES];
-//    }
-//
-//    [self.videoCanvasStudent mas_remakeConstraints:^(MASConstraintMaker *make) {
-//        if (self.isOtherOnline && self.isAssistantOnline) {
-//            make.top.mas_equalTo(self.videoCanvasAssistant.mas_bottom);
-//            make.left.mas_equalTo(self.videoCanvasAssistant.mas_left);
-//        } else if (self.isOtherOnline || !self.isAssistantOnline) {
-//            make.top.mas_equalTo(self.videoCanvasOther.mas_top).with.offset(10);
-//            make.left.mas_equalTo(self.videoCanvasOther.mas_right).with.offset(-videoWidth / 4 - 10);
-//        } else {
-//            make.top.mas_equalTo(self.videoCanvasAssistant.mas_top).with.offset(10);
-//            make.left.mas_equalTo(self.videoCanvasAssistant.mas_right).with.offset(-videoWidth / 4 - 10);
-//        }
-////        make.left.mas_equalTo(self.videoCanvasOther.mas_right).with.offset(-videoWidth / 4 - 10);
-//
-//        make.width.mas_equalTo(videoWidth / 4);
-//        make.height.mas_equalTo(videoHeight / 4);
-//    }];
-//
+
+    
+    // ---
     [self.countDownClock mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.mas_centerY).with.offset(-80);
         make.left.mas_equalTo(self.mas_centerX).with.offset(-80);
@@ -510,237 +467,6 @@ enum CANVAS_TYPE_ {
         }];
     }
     
-//    if ([self.videoCanvasTeacher getUserOnline]) {
-//        viewWidth = [[NSNumber numberWithFloat:self.frame.size.width] intValue];
-//        viewHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//        videoWidth = [[NSNumber numberWithFloat:self.frame.size.width / 2] intValue];
-//        videoHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//        verticalOffset = 0; horizontalOffset = 0;
-//        if (videoWidth / 4 >= videoHeight / 3) {    // 左右留黑
-//            videoWidth = videoHeight * 4 / 3;
-//            horizontalOffset = viewWidth / 2 - videoWidth;
-//        } else {                                    // 上下留黑
-//            videoHeight = videoWidth * 3 / 4;
-//            verticalOffset = (viewHeight - videoHeight) / 2;
-//        }
-//
-//        [self.videoCanvasTeacher setHidden:NO];
-//        [self.videoCanvasTeacher mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(self.mas_top).with.offset(verticalOffset);
-//            make.left.mas_equalTo(self.mas_left).with.offset(horizontalOffset);
-//            make.right.mas_equalTo(self.mas_centerX);
-//            make.bottom.mas_equalTo(self.mas_bottom).with.offset(-verticalOffset);
-//        }];
-//    } else {
-//        [self.videoCanvasTeacher setHidden:YES];
-//    }
-//
-//    if ([self.videoCanvasAssistant getUserOnline]) {
-//        [self.videoCanvasAssistant setHidden:NO];
-//
-//        if ([self.videoCanvasTeacher getUserOnline]) {
-//            viewWidth = [[NSNumber numberWithFloat:self.frame.size.width] intValue];
-//            viewHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//            videoWidth = [[NSNumber numberWithFloat:self.frame.size.width / 2] intValue];
-//            videoHeight = [[NSNumber numberWithFloat:self.frame.size.height / 2] intValue];
-//            verticalOffset = 0; horizontalOffset = 0;
-//
-//            if (videoWidth / 4 >= videoHeight / 3) {    // 左右留黑
-//                videoWidth = videoHeight * 4 / 3;
-//                horizontalOffset = viewWidth / 2 - videoWidth;
-//            } else {                                    // 上下留黑
-//                videoHeight = videoWidth * 3 / 4;
-//                verticalOffset = (viewHeight - 2 * videoHeight) / 2;
-//            }
-//            [self.videoCanvasAssistant mas_remakeConstraints:^(MASConstraintMaker *make) {
-//                make.top.mas_equalTo(self.mas_top).with.offset(verticalOffset);
-//                make.left.mas_equalTo(self.mas_centerX);
-//                make.width.mas_equalTo(videoWidth);
-//                make.height.mas_equalTo(videoWidth);
-//            }];
-//        } else {
-//            viewWidth = [[NSNumber numberWithFloat:self.frame.size.width] intValue];
-//            viewHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//            videoWidth = [[NSNumber numberWithFloat:self.frame.size.width / 2] intValue];
-//            videoHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//            verticalOffset = 0; horizontalOffset = 0;
-//            if (videoWidth / 4 >= videoHeight / 3) {    // 左右留黑
-//                videoWidth = videoHeight * 4 / 3;
-//                horizontalOffset = viewWidth / 2 - videoWidth;
-//            } else {                                    // 上下留黑
-//                videoHeight = videoWidth * 3 / 4;
-//                verticalOffset = (viewHeight - videoHeight) / 2;
-//            }
-//
-//            [self.videoCanvasAssistant mas_remakeConstraints:^(MASConstraintMaker *make) {
-//                make.top.mas_equalTo(self.mas_top).with.offset(verticalOffset);
-//                make.left.mas_equalTo(self.mas_left).with.offset(horizontalOffset);
-//                make.right.mas_equalTo(self.mas_centerX);
-//                make.bottom.mas_equalTo(self.mas_bottom).with.offset(-verticalOffset);
-//            }];
-//        }
-//    } else {
-//        if ([self.videoCanvasTeacher getUserOnline]) {
-//            [self.videoCanvasAssistant setHidden:YES];
-//        } else {
-//            viewWidth = [[NSNumber numberWithFloat:self.frame.size.width] intValue];
-//            viewHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//            videoWidth = [[NSNumber numberWithFloat:self.frame.size.width / 2] intValue];
-//            videoHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//            verticalOffset = 0; horizontalOffset = 0;
-//            if (videoWidth / 4 >= videoHeight / 3) {    // 左右留黑
-//                videoWidth = videoHeight * 4 / 3;
-//                horizontalOffset = viewWidth / 2 - videoWidth;
-//            } else {                                    // 上下留黑
-//                videoHeight = videoWidth * 3 / 4;
-//                verticalOffset = (viewHeight - videoHeight) / 2;
-//            }
-//
-//            [self.videoCanvasAssistant setHidden:NO];
-//            [self.videoCanvasAssistant mas_remakeConstraints:^(MASConstraintMaker *make) {
-//                make.top.mas_equalTo(self.mas_top).with.offset(verticalOffset);
-//                make.left.mas_equalTo(self.mas_left).with.offset(horizontalOffset);
-//                make.right.mas_equalTo(self.mas_centerX);
-//                make.bottom.mas_equalTo(self.mas_bottom).with.offset(-verticalOffset);
-//            }];
-//        }
-//    }
-//
-//    if ([self.videoCanvasTeacher getUserOnline] && [self.videoCanvasAssistant getUserOnline]) {
-//        viewWidth = [[NSNumber numberWithFloat:self.frame.size.width] intValue];
-//        viewHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//        videoWidth = [[NSNumber numberWithFloat:self.frame.size.width / 2] intValue];
-//        videoHeight = [[NSNumber numberWithFloat:self.frame.size.height / 2] intValue];
-//        verticalOffset = 0; horizontalOffset = 0;
-//
-//        if (videoWidth / 4 >= videoHeight / 3) {    // 左右留黑
-//            videoWidth = videoHeight * 4 / 3;
-//            horizontalOffset = viewWidth / 2 - videoWidth;
-//        } else {                                    // 上下留黑
-//            videoHeight = videoWidth * 3 / 4;
-//            verticalOffset = (viewHeight - 2 * videoHeight) / 2;
-//        }
-//
-//        [self.videoCanvasStudent mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(self.mas_top).with.offset(verticalOffset + videoHeight);
-//            make.left.mas_equalTo(self.mas_centerX);
-//            make.width.mas_equalTo(videoWidth);
-//            make.height.mas_equalTo(videoHeight);
-//        }];
-//    } else {
-//        viewWidth = [[NSNumber numberWithFloat:self.frame.size.width] intValue];
-//        viewHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//        videoWidth = [[NSNumber numberWithFloat:self.frame.size.width / 2] intValue];
-//        videoHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//        verticalOffset = 0; horizontalOffset = 0;
-//        if (videoWidth / 4 >= videoHeight / 3) {    // 左右留黑
-//            videoWidth = videoHeight * 4 / 3;
-//            horizontalOffset = viewWidth / 2 - videoWidth;
-//        } else {                                    // 上下留黑
-//            videoHeight = videoWidth * 3 / 4;
-//            verticalOffset = (viewHeight - videoHeight) / 2;
-//        }
-//
-//        [self.videoCanvasStudent mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(self.mas_top).with.offset(verticalOffset);
-//            make.left.mas_equalTo(self.mas_centerX);
-//            make.width.mas_equalTo(videoWidth);
-//            make.height.mas_equalTo(videoHeight);
-//        }];
-//    }
-    
-    
-    
-//    if ((!self.isOtherOnline && !self.isAssistantOnline) ||
-//        (self.isOtherOnline && !self.isAssistantOnline)) {
-//        viewWidth = [[NSNumber numberWithFloat:self.frame.size.width] intValue];
-//        viewHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//        videoWidth = [[NSNumber numberWithFloat:self.frame.size.width / 2] intValue];
-//        videoHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//        verticalOffset = 0; horizontalOffset = 0;
-//        if (videoWidth / 4 >= videoHeight / 3) {    // 左右留黑
-//            videoWidth = videoHeight * 4 / 3;
-//            horizontalOffset = viewWidth / 2 - videoWidth;
-//        } else {                                    // 上下留黑
-//            videoHeight = videoWidth * 3 / 4;
-//            verticalOffset = (viewHeight - videoHeight) / 2;
-//        }
-//
-//        [self.videoCanvasOther mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(self.mas_top).with.offset(verticalOffset);
-//            make.left.mas_equalTo(self.mas_left).with.offset(horizontalOffset);
-//            make.right.mas_equalTo(self.mas_centerX);
-//            make.bottom.mas_equalTo(self.mas_bottom).with.offset(-verticalOffset);
-//        }];
-//        [self.videoCanvasAssistant setHidden:YES];
-//        [self.videoCanvasStudent mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(self.mas_top).with.offset(verticalOffset);
-//            make.left.mas_equalTo(self.mas_centerX);
-//            make.right.mas_equalTo(self.mas_right).with.offset(-horizontalOffset);
-//            make.bottom.mas_equalTo(self.mas_bottom).with.offset(-verticalOffset);
-//        }];
-//    } else if (!self.isOtherOnline && self.isAssistantOnline) {
-//        viewWidth = [[NSNumber numberWithFloat:self.frame.size.width] intValue];
-//        viewHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//        videoWidth = [[NSNumber numberWithFloat:self.frame.size.width / 2] intValue];
-//        videoHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//        verticalOffset = 0; horizontalOffset = 0;
-//        if (videoWidth / 4 >= videoHeight / 3) {    // 左右留黑
-//            videoWidth = videoHeight * 4 / 3;
-//            horizontalOffset = viewWidth / 2 - videoWidth;
-//        } else {                                    // 上下留黑
-//            videoHeight = videoWidth * 3 / 4;
-//            verticalOffset = (viewHeight - videoHeight) / 2;
-//        }
-//
-//        [self.videoCanvasOther setHidden:YES];
-//        [self.videoCanvasAssistant mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(self.mas_top).with.offset(verticalOffset);
-//            make.left.mas_equalTo(self.mas_left).with.offset(horizontalOffset);
-//            make.right.mas_equalTo(self.mas_centerX);
-//            make.bottom.mas_equalTo(self.mas_bottom).with.offset(-verticalOffset);
-//        }];
-//        [self.videoCanvasStudent mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(self.mas_top).with.offset(verticalOffset);
-//            make.left.mas_equalTo(self.mas_centerX);
-//            make.right.mas_equalTo(self.mas_right).with.offset(-horizontalOffset);
-//            make.bottom.mas_equalTo(self.mas_bottom).with.offset(-verticalOffset);
-//        }];
-//    } else if (self.isOtherOnline && self.isAssistantOnline) {
-//        viewWidth = [[NSNumber numberWithFloat:self.frame.size.width] intValue];
-//        viewHeight = [[NSNumber numberWithFloat:self.frame.size.height] intValue];
-//        videoWidth = [[NSNumber numberWithFloat:self.frame.size.width / 2] intValue];
-//        videoHeight = [[NSNumber numberWithFloat:self.frame.size.height / 2] intValue];
-//        verticalOffset = 0; horizontalOffset = 0;
-//
-//        if (videoWidth / 4 >= videoHeight / 3) {    // 左右留黑
-//            videoWidth = videoHeight * 4 / 3;
-//            horizontalOffset = viewWidth / 2 - videoWidth;
-//        } else {                                    // 上下留黑
-//            videoHeight = videoWidth * 3 / 4;
-//            verticalOffset = (viewHeight - 2 * videoHeight) / 2;
-//        }
-//
-//        [self.videoCanvasOther mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(self.mas_top).with.offset((viewHeight - videoHeight) / 2);
-//            make.left.mas_equalTo(self.mas_left).with.offset(horizontalOffset);
-//            make.width.mas_equalTo(videoWidth);
-//            make.height.mas_equalTo(videoHeight);
-//        }];
-//        [self.videoCanvasAssistant mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(self.mas_top).with.offset(verticalOffset);
-//            make.left.mas_equalTo(self.mas_centerX);
-//            make.width.mas_equalTo(videoWidth);
-//            make.height.mas_equalTo(videoHeight);
-//        }];
-//        [self.videoCanvasStudent mas_remakeConstraints:^(MASConstraintMaker *make) {
-//            make.top.mas_equalTo(self.videoCanvasAssistant.mas_bottom);
-//            make.left.mas_equalTo(self.mas_centerX);
-//            make.width.mas_equalTo(videoWidth);
-//            make.height.mas_equalTo(videoHeight);
-//        }];
-//    }
-//
     [self.countDownClock mas_remakeConstraints:^(MASConstraintMaker *make) {
         make.top.mas_equalTo(self.mas_centerY).with.offset(-80);
         make.left.mas_equalTo(self.mas_centerX).with.offset(-80);

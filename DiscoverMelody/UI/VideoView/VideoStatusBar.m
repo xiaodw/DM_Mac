@@ -158,6 +158,8 @@
     self.countBeginWithRedColorWarning = warn;
     self.countEnd = end;
     [self.textViewTime setBackgroundColor:[NSColor clearColor]];
+    [self.imageViewTime setImage:[NSImage imageNamed:@"whiteClock"]];
+    [self.textViewTime setTextColor:[NSColor whiteColor]];
     
     if (self.countEnd <= self.countBegin) {
         return;

@@ -649,6 +649,17 @@ enum USER_TYPE {
     return nil;
 }
 
+-(VideoCanvas*) videoCanvasForUser:(NSUInteger)userId {
+    if (userId == self.channelUidStudent.integerValue) {
+        return self.videoView.videoCanvasStudent;
+    } else if (userId == self.channelUidTeacher.integerValue) {
+        return self.videoView.videoCanvasTeacher;
+    } else if (userId == self.channelUidAssistant.integerValue) {
+        return self.videoView.videoCanvasAssistant;
+    }
+    return nil;
+}
+
 - (void)initializeAgoraEngine {
     self.agoraKit = [AgoraRtcEngineKit sharedEngineWithAppId:self.agoraAppId delegate:self];
     [self.agoraKit adjustPlaybackSignalVolume:self.playVolume];
@@ -692,20 +703,27 @@ enum USER_TYPE {
     [[LogData defaultLogData]reportUserEnter:self.channelUidMine Reporter:self.channelUidMine MeetingId:self.meetingId Token:self.userToken];
 }
 
+- (void)rtcEngine:(AgoraRtcEngineKit *)engine firstLocalVideoFrameWithSize:(CGSize)size elapsed:(NSInteger)elapsed {
+    [[self videoCanvasForUser:[self.userId integerValue]] setVideoSize:size];
+}
+
+//- (void)rtcEngine:(AgoraRtcEngineKit *)engine firstRemoteVideoFrameOfUid:(NSUInteger)uid size:(CGSize)size elapsed:(NSInteger)elapsed {}
+
 - (void)rtcEngine:(AgoraRtcEngineKit *)engine firstRemoteVideoDecodedOfUid:(NSUInteger)uid size: (CGSize)size elapsed:(NSInteger)elapsed {
     if (uid != self.channelUidStudent.intValue &&
         uid != self.channelUidTeacher.integerValue &&
         uid != self.channelUidAssistant.integerValue) {
         return;
     }
-    
+
     AgoraRtcVideoCanvas *videoCanvas = [[AgoraRtcVideoCanvas alloc] init];
     videoCanvas.uid = uid;
     videoCanvas.view = [self canvasViewForUser:uid];
     videoCanvas.renderMode = AgoraRtc_Render_Fit;
     [self.agoraKit setupRemoteVideo:videoCanvas];
-    
+
     [self updateUser:uid OnlineStatus:YES];
+    [[self videoCanvasForUser:uid]setVideoSize:size];
     [self.videoView invalidateViewLayout];
 }
 

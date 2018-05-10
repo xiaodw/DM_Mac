@@ -16,6 +16,8 @@
 -(BOOL)getPlaceHolderHidden;
 -(void)setUserOnline:(BOOL)yesno;
 -(BOOL)getUserOnline;
+-(void)setVideoSize:(NSSize)size;
+-(NSSize)getVideoSize;
 -(void)setShowBoarder:(BOOL)yesno;
 -(BOOL)getShowBoarder;
 -(void)setClickAction:(SEL)action withTarget:(id)target;
