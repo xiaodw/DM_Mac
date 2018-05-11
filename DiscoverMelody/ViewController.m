@@ -37,13 +37,6 @@ enum APP_DATA_STATUS {
     APP_DATA_STATUS_HANDLED
 };
 
-enum USER_TYPE {
-    USER_TYPE_STUDENT = 0,
-    USER_TYPE_TEACHER,
-    USER_TYPE_ADMIN,
-    USER_TYPE_ASSISTANT
-};
-
 #define DM_GET_APP_CONFIG_DONE @"DmGetAppConfigDone"
 #define DM_HANDLE_APP_CONFIG_DONE @"DmHandleAppConfigDone"
 #define DMLOGIN_STEP_1_DONE @"DmLoginStep1Done"
@@ -461,9 +454,13 @@ enum USER_TYPE {
         self.userType = [dataObj objectForKey:@"user_type"];
         
         NSDictionary* configObj = [dataObj objectForKey:@"config"];
-        self.agoraVideoProfile = [[configObj objectForKey:@"agoraVideoProfile"]integerValue];
+        self.agoraVideoProfile = [[configObj objectForKey:@"agora_video_profile"]integerValue];
         self.enableScreenSharing = [[configObj objectForKey:@"screen_sharing"]boolValue];
         self.enableShowRecodingStatus = [[configObj objectForKey:@"recording"]boolValue];
+        self.playVolume = [[configObj objectForKey:@"play_volume"]integerValue];
+        self.recordVolume = [[configObj objectForKey:@"record_volume"]integerValue];
+        self.audioScenario = [[configObj objectForKey:@"audio_scenario"]integerValue];
+        self.audioProfile = [[configObj objectForKey:@"audio_profile"]integerValue];
         
         [self.videoView setUserTypeMine:self.userType.integerValue];
         
@@ -662,9 +659,6 @@ enum USER_TYPE {
 
 - (void)initializeAgoraEngine {
     self.agoraKit = [AgoraRtcEngineKit sharedEngineWithAppId:self.agoraAppId delegate:self];
-    [self.agoraKit adjustPlaybackSignalVolume:self.playVolume];
-    [self.agoraKit adjustRecordingSignalVolume:self.recordVolume];
-    [self.agoraKit setAudioProfile:self.audioProfile scenario:self.audioScenario];
 }
 
 - (void)setupVideo {
@@ -673,6 +667,10 @@ enum USER_TYPE {
 }
 
 - (void)setupLocalVideo {
+    if (self.playVolume > 0) [self.agoraKit adjustPlaybackSignalVolume:100];
+    if (self.recordVolume > 0) [self.agoraKit adjustRecordingSignalVolume:100];
+    if (self.audioProfile > 0 && self.audioScenario > 0) [self.agoraKit setAudioProfile:4 scenario:2];
+    
     AgoraRtcVideoCanvas *videoCanvas = [[AgoraRtcVideoCanvas alloc] init];
     videoCanvas.uid = 0;
     // UID = 0 means we let Agora pick a UID for us
@@ -692,6 +690,7 @@ enum USER_TYPE {
     
     videoCanvas.renderMode = AgoraRtc_Render_Fit;
     [self.agoraKit setupLocalVideo:videoCanvas];
+    NSLog(@"setupLocalVideo");
     // Bind local video stream to view
 }
 
@@ -705,6 +704,8 @@ enum USER_TYPE {
 
 - (void)rtcEngine:(AgoraRtcEngineKit *)engine firstLocalVideoFrameWithSize:(CGSize)size elapsed:(NSInteger)elapsed {
     [[self videoCanvasForUser:[self.userId integerValue]] setVideoSize:size];
+    [self.videoView invalidateViewLayout];
+    NSLog(@"firstLocalVideoFrameWithSize");
 }
 
 //- (void)rtcEngine:(AgoraRtcEngineKit *)engine firstRemoteVideoFrameOfUid:(NSUInteger)uid size:(CGSize)size elapsed:(NSInteger)elapsed {}
@@ -727,6 +728,16 @@ enum USER_TYPE {
     [self.videoView invalidateViewLayout];
 }
 
+- (void)rtcEngine:(AgoraRtcEngineKit *)engine videoSizeChangedOfUid:(NSUInteger)uid size:(CGSize)size rotation:(NSInteger)rotation {
+    if (uid != self.channelUidStudent.intValue &&
+        uid != self.channelUidTeacher.integerValue &&
+        uid != self.channelUidAssistant.integerValue) {
+        return;
+    }
+    [[self videoCanvasForUser:uid]setVideoSize:size];
+    [self.videoView invalidateViewLayout];
+}
+
 - (void)leaveChannel {
     [self.agoraKit leaveChannel:nil];
     [self.agoraKit setupLocalVideo:nil];
@@ -734,6 +745,7 @@ enum USER_TYPE {
     [self.videoView.videoCanvasStudent setUserOnline:NO];
     [self.videoView.videoCanvasTeacher setUserOnline:NO];
     [self.videoView.videoCanvasAssistant setUserOnline:NO];
+    [self.videoView invalidateViewLayout];
     //self.agoraKit = nil;
     [[LogData defaultLogData]reportUserExit:self.channelUidMine Reporter:self.channelUidMine MeetingId:self.meetingId Token:self.userToken];
 }

@@ -18,6 +18,7 @@
 -(BOOL)getUserOnline;
 -(void)setVideoSize:(NSSize)size;
 -(NSSize)getVideoSize;
+-(BOOL)getVideoSizeValid;
 -(void)setShowBoarder:(BOOL)yesno;
 -(BOOL)getShowBoarder;
 -(void)setClickAction:(SEL)action withTarget:(id)target;

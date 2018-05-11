@@ -78,6 +78,8 @@
 		0D5842CA20847843000E8023 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		0D5FB5AD2029440F002E1628 /* AppData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
 		0D5FB5AE2029440F002E1628 /* AppData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
+		0D65A65520A5456700A6D4F3 /* UrlSchemes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UrlSchemes.h; sourceTree = "<group>"; };
+		0D65A65620A5461D00A6D4F3 /* ProductConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductConfig.h; sourceTree = "<group>"; };
 		0D6F62382016E6ED0040CF38 /* DMCommonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMCommonModel.m; sourceTree = "<group>"; };
 		0D6F623A2016E6ED0040CF38 /* DMUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserDefaults.h; sourceTree = "<group>"; };
 		0D6F623B2016E6ED0040CF38 /* DMUserDefaults.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMUserDefaults.m; sourceTree = "<group>"; };
@@ -240,8 +242,10 @@
 			children = (
 				0D3EEDEB202AAB970010540D /* Server */,
 				0D3EEDEA202AAB5F0010540D /* Local */,
+				0D65A65620A5461D00A6D4F3 /* ProductConfig.h */,
 				0D50579D2071E02200DF1CB2 /* UrlConfig.h */,
 				0D751BBD20A0389500E738E5 /* ColorConfig.h */,
+				0D65A65520A5456700A6D4F3 /* UrlSchemes.h */,
 			);
 			path = Data;
 			sourceTree = "<group>";

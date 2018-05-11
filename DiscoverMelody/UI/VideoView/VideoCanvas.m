@@ -12,7 +12,7 @@
 @interface VideoCanvas()
 @property BOOL isShowBoarder;
 @property BOOL isUserOnline;
-@property NSSize videoSize;
+@property (nonatomic) NSSize videoSize;
 @property (nullable, weak) id target;
 @property (nullable) SEL action;
 @end;
@@ -36,7 +36,6 @@
         [[NSColor blackColor] setFill];
         NSRectFill(dirtyRect);
 //    }
-    
     [super drawRect:dirtyRect];
     // Drawing code here.
 }
@@ -113,6 +112,7 @@
 -(void)setUserOnline:(BOOL)yesno {
     self.isUserOnline = yesno;
     
+    [self.videoView.layer setBackgroundColor:[NSColor blackColor].CGColor];
     [self.videoView setHidden:!yesno];
     [self.placeholderView setHidden:yesno];
 }
@@ -127,6 +127,10 @@
 
 -(NSSize)getVideoSize {
     return _videoSize;
+}
+
+-(BOOL)getVideoSizeValid {
+    return _videoSize.width > 0 && _videoSize.height > 0;
 }
 
 -(void)setShowBoarder:(BOOL)yesno {

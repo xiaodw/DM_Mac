@@ -18,6 +18,13 @@ enum LAYOUT_MODE {
     LAYOUT_MODE_SL      // small-large
 };
 
+enum USER_TYPE {
+    USER_TYPE_STUDENT = 0,
+    USER_TYPE_TEACHER,
+    USER_TYPE_ADMIN,
+    USER_TYPE_ASSISTANT
+};
+
 @interface VideoView : NSView
 @property (strong,nonatomic) VideoCanvas* videoCanvasStudent;
 @property (strong,nonatomic) VideoCanvas* videoCanvasTeacher;
