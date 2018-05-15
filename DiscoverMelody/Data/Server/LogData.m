@@ -26,6 +26,13 @@ static LogData *defaultLogData = nil;
     dic[@"ver"] = [[[NSBundle mainBundle]infoDictionary]objectForKey:@"CFBundleShortVersionString"];
     dic[@"app"] = @"mac";
     dic[@"lan"] = NSLocalizedString(@"GLOBAL_APP_LANGUAGE", nil);
+#if defined(PRODUCT_TYPE_WE_EDUCATION)
+    dic[@"business"] = @"weedu";
+#elif defined(PRODUCT_TYPE_DISCOVER_MELODY)
+    dic[@"business"] = @"discover-melody";
+#elif defined(PRODUCT_TYPE_WE_DESIGN)
+    dic[@"business"] = @"wedesign";
+#endif
     return dic;
 }
 
