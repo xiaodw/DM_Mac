@@ -9,11 +9,114 @@
 /* Begin PBXBuildFile section */
 		0D10274120188A3A00D15A54 /* VideoControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D10272F20188A3A00D15A54 /* VideoControlBar.m */; };
 		0D10274420188A3A00D15A54 /* VideoCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D10273720188A3A00D15A54 /* VideoCanvas.m */; };
+		0D19689020AA98FF00CCCB1B /* DMConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62682016E7080040CF38 /* DMConfigManager.m */; };
+		0D19689120AA98FF00CCCB1B /* DMVideoReplayData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62522016E6FE0040CF38 /* DMVideoReplayData.m */; };
+		0D19689220AA98FF00CCCB1B /* DMHomeDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62542016E6FE0040CF38 /* DMHomeDataModel.m */; };
+		0D19689320AA98FF00CCCB1B /* VideoCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D10273720188A3A00D15A54 /* VideoCanvas.m */; };
+		0D19689420AA98FF00CCCB1B /* DMApiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62812016E7100040CF38 /* DMApiModel.m */; };
+		0D19689520AA98FF00CCCB1B /* DMClassDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F624A2016E6FE0040CF38 /* DMClassDataModel.m */; };
+		0D19689620AA98FF00CCCB1B /* STOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE021320232F4E001BF8DD /* STOverlayView.m */; };
+		0D19689720AA98FF00CCCB1B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8FE8F2016E6A100A09644 /* ViewController.m */; };
+		0D19689820AA98FF00CCCB1B /* DMLoginDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62592016E6FE0040CF38 /* DMLoginDataModel.m */; };
+		0D19689920AA98FF00CCCB1B /* DMSecretKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F626A2016E7080040CF38 /* DMSecretKeyManager.m */; };
+		0D19689A20AA98FF00CCCB1B /* DMBaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62422016E6F70040CF38 /* DMBaseDataModel.m */; };
+		0D19689B20AA98FF00CCCB1B /* DMUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F623B2016E6ED0040CF38 /* DMUserDefaults.m */; };
+		0D19689C20AA98FF00CCCB1B /* STOverlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE021020232F4D001BF8DD /* STOverlayController.m */; };
+		0D19689D20AA98FF00CCCB1B /* STOverlayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE021220232F4E001BF8DD /* STOverlayWindow.m */; };
+		0D19689E20AA98FF00CCCB1B /* VideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D89AB94201ACB620055BAF9 /* VideoView.m */; };
+		0D19689F20AA98FF00CCCB1B /* LessonCodeField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D23A28F20215F6F0032DFB7 /* LessonCodeField.m */; };
+		0D1968A020AA98FF00CCCB1B /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8456AD202C24B000EFDB6B /* OverlayView.m */; };
+		0D1968A120AA98FF00CCCB1B /* DeviceSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D0B4F2020116200698771 /* DeviceSelectionViewController.m */; };
+		0D1968A220AA98FF00CCCB1B /* DMAnswerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62462016E6FE0040CF38 /* DMAnswerData.m */; };
+		0D1968A320AA98FF00CCCB1B /* DMCommonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62382016E6ED0040CF38 /* DMCommonModel.m */; };
+		0D1968A420AA98FF00CCCB1B /* DMCloudConfigData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F624E2016E6FE0040CF38 /* DMCloudConfigData.m */; };
+		0D1968A520AA98FF00CCCB1B /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5FB5AE2029440F002E1628 /* AppData.m */; };
+		0D1968A620AA98FF00CCCB1B /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEDE7202AAB5B0010540D /* LocalData.m */; };
+		0D1968A720AA98FF00CCCB1B /* VideoStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D74BC432019B0DC002D71E9 /* VideoStatusBar.m */; };
+		0D1968A820AA98FF00CCCB1B /* DMClassFileDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62502016E6FE0040CF38 /* DMClassFileDataModel.m */; };
+		0D1968A920AA98FF00CCCB1B /* LogData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEDF2202AAE8C0010540D /* LogData.m */; };
+		0D1968AA20AA98FF00CCCB1B /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFF62720219A94005513E9 /* ColorButton.m */; };
+		0D1968AB20AA98FF00CCCB1B /* DMCustomerDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F624C2016E6FE0040CF38 /* DMCustomerDataModel.m */; };
+		0D1968AC20AA98FF00CCCB1B /* DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62752016E7080040CF38 /* DMTools.m */; };
+		0D1968AD20AA98FF00CCCB1B /* DMConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62742016E7080040CF38 /* DMConst.m */; };
+		0D1968AE20AA98FF00CCCB1B /* DMCourseDatasModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F624D2016E6FE0040CF38 /* DMCourseDatasModel.m */; };
+		0D1968AF20AA98FF00CCCB1B /* CountDownClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D74BC462019C23A002D71E9 /* CountDownClock.m */; };
+		0D1968B020AA98FF00CCCB1B /* DMQuestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62482016E6FE0040CF38 /* DMQuestData.m */; };
+		0D1968B120AA98FF00CCCB1B /* DMSetConfigData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62692016E7080040CF38 /* DMSetConfigData.m */; };
+		0D1968B220AA98FF00CCCB1B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8FE972016E6A200A09644 /* main.m */; };
+		0D1968B320AA98FF00CCCB1B /* DMAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F624B2016E6FE0040CF38 /* DMAccount.m */; };
+		0D1968B420AA98FF00CCCB1B /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D89AB97201B02990055BAF9 /* LoginView.m */; };
+		0D1968B520AA98FF00CCCB1B /* DMRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62852016E7100040CF38 /* DMRequestModel.m */; };
+		0D1968B620AA98FF00CCCB1B /* DMHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62832016E7100040CF38 /* DMHttpClient.m */; };
+		0D1968B720AA98FF00CCCB1B /* VideoControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D10272F20188A3A00D15A54 /* VideoControlBar.m */; };
+		0D1968B820AA98FF00CCCB1B /* DMLayoutContst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62712016E7080040CF38 /* DMLayoutContst.m */; };
+		0D1968B920AA98FF00CCCB1B /* ServerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEDED202AABB10010540D /* ServerData.m */; };
+		0D1968BA20AA98FF00CCCB1B /* DeviceSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D0B662020760F00698771 /* DeviceSelector.m */; };
+		0D1968BB20AA98FF00CCCB1B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8FE8C2016E6A100A09644 /* AppDelegate.m */; };
+		0D1968BC20AA98FF00CCCB1B /* YRKSpinningProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE020B2022FDDF001BF8DD /* YRKSpinningProgressIndicator.m */; };
+		0D1968BE20AA98FF00CCCB1B /* libPods-DiscoverMelody.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D197F2AA1FA62FB7C61024F5 /* libPods-DiscoverMelody.a */; };
+		0D1968C020AA98FF00CCCB1B /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0DFE02052022C088001BF8DD /* AppIcon.icns */; };
+		0D1968C120AA98FF00CCCB1B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8FE912016E6A100A09644 /* Assets.xcassets */; };
+		0D1968C320AA98FF00CCCB1B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D8D0B5A20201D6200698771 /* Localizable.strings */; };
+		0D1968C420AA98FF00CCCB1B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8FE932016E6A100A09644 /* Main.storyboard */; };
+		0D1968CD20AA9B4B00CCCB1B /* AppIcon_discover_melody.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0D1968CC20AA9B4B00CCCB1B /* AppIcon_discover_melody.icns */; };
+		0D1968D120AA9C4200CCCB1B /* AppIcon_we_design.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0D1968D020AA9C4200CCCB1B /* AppIcon_we_design.icns */; };
+		0D1968D320AA9C7A00CCCB1B /* AppIcon_we_education.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0D1968D220AA9C7900CCCB1B /* AppIcon_we_education.icns */; };
 		0D23A29020215F6F0032DFB7 /* LessonCodeField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D23A28F20215F6F0032DFB7 /* LessonCodeField.m */; };
 		0D3EEDE9202AAB5B0010540D /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEDE7202AAB5B0010540D /* LocalData.m */; };
 		0D3EEDEE202AABB10010540D /* ServerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEDED202AABB10010540D /* ServerData.m */; };
 		0D3EEDF3202AAE8C0010540D /* LogData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEDF2202AAE8C0010540D /* LogData.m */; };
 		0D5FB5AF2029440F002E1628 /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5FB5AE2029440F002E1628 /* AppData.m */; };
+		0D619B0620AA966C00E9618D /* DMConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62682016E7080040CF38 /* DMConfigManager.m */; };
+		0D619B0720AA966C00E9618D /* DMVideoReplayData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62522016E6FE0040CF38 /* DMVideoReplayData.m */; };
+		0D619B0820AA966C00E9618D /* DMHomeDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62542016E6FE0040CF38 /* DMHomeDataModel.m */; };
+		0D619B0920AA966C00E9618D /* VideoCanvas.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D10273720188A3A00D15A54 /* VideoCanvas.m */; };
+		0D619B0A20AA966C00E9618D /* DMApiModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62812016E7100040CF38 /* DMApiModel.m */; };
+		0D619B0B20AA966C00E9618D /* DMClassDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F624A2016E6FE0040CF38 /* DMClassDataModel.m */; };
+		0D619B0C20AA966C00E9618D /* STOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE021320232F4E001BF8DD /* STOverlayView.m */; };
+		0D619B0D20AA966C00E9618D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8FE8F2016E6A100A09644 /* ViewController.m */; };
+		0D619B0E20AA966C00E9618D /* DMLoginDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62592016E6FE0040CF38 /* DMLoginDataModel.m */; };
+		0D619B0F20AA966C00E9618D /* DMSecretKeyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F626A2016E7080040CF38 /* DMSecretKeyManager.m */; };
+		0D619B1020AA966C00E9618D /* DMBaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62422016E6F70040CF38 /* DMBaseDataModel.m */; };
+		0D619B1120AA966C00E9618D /* DMUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F623B2016E6ED0040CF38 /* DMUserDefaults.m */; };
+		0D619B1220AA966C00E9618D /* STOverlayController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE021020232F4D001BF8DD /* STOverlayController.m */; };
+		0D619B1320AA966C00E9618D /* STOverlayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE021220232F4E001BF8DD /* STOverlayWindow.m */; };
+		0D619B1420AA966C00E9618D /* VideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D89AB94201ACB620055BAF9 /* VideoView.m */; };
+		0D619B1520AA966C00E9618D /* LessonCodeField.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D23A28F20215F6F0032DFB7 /* LessonCodeField.m */; };
+		0D619B1620AA966C00E9618D /* OverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8456AD202C24B000EFDB6B /* OverlayView.m */; };
+		0D619B1720AA966C00E9618D /* DeviceSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D0B4F2020116200698771 /* DeviceSelectionViewController.m */; };
+		0D619B1820AA966C00E9618D /* DMAnswerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62462016E6FE0040CF38 /* DMAnswerData.m */; };
+		0D619B1920AA966C00E9618D /* DMCommonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62382016E6ED0040CF38 /* DMCommonModel.m */; };
+		0D619B1A20AA966C00E9618D /* DMCloudConfigData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F624E2016E6FE0040CF38 /* DMCloudConfigData.m */; };
+		0D619B1B20AA966C00E9618D /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5FB5AE2029440F002E1628 /* AppData.m */; };
+		0D619B1C20AA966C00E9618D /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEDE7202AAB5B0010540D /* LocalData.m */; };
+		0D619B1D20AA966C00E9618D /* VideoStatusBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D74BC432019B0DC002D71E9 /* VideoStatusBar.m */; };
+		0D619B1E20AA966C00E9618D /* DMClassFileDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62502016E6FE0040CF38 /* DMClassFileDataModel.m */; };
+		0D619B1F20AA966C00E9618D /* LogData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEDF2202AAE8C0010540D /* LogData.m */; };
+		0D619B2020AA966C00E9618D /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFF62720219A94005513E9 /* ColorButton.m */; };
+		0D619B2120AA966C00E9618D /* DMCustomerDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F624C2016E6FE0040CF38 /* DMCustomerDataModel.m */; };
+		0D619B2220AA966C00E9618D /* DMTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62752016E7080040CF38 /* DMTools.m */; };
+		0D619B2320AA966C00E9618D /* DMConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62742016E7080040CF38 /* DMConst.m */; };
+		0D619B2420AA966C00E9618D /* DMCourseDatasModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F624D2016E6FE0040CF38 /* DMCourseDatasModel.m */; };
+		0D619B2520AA966C00E9618D /* CountDownClock.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D74BC462019C23A002D71E9 /* CountDownClock.m */; };
+		0D619B2620AA966C00E9618D /* DMQuestData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62482016E6FE0040CF38 /* DMQuestData.m */; };
+		0D619B2720AA966C00E9618D /* DMSetConfigData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62692016E7080040CF38 /* DMSetConfigData.m */; };
+		0D619B2820AA966C00E9618D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8FE972016E6A200A09644 /* main.m */; };
+		0D619B2920AA966C00E9618D /* DMAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F624B2016E6FE0040CF38 /* DMAccount.m */; };
+		0D619B2A20AA966C00E9618D /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D89AB97201B02990055BAF9 /* LoginView.m */; };
+		0D619B2B20AA966C00E9618D /* DMRequestModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62852016E7100040CF38 /* DMRequestModel.m */; };
+		0D619B2C20AA966C00E9618D /* DMHttpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62832016E7100040CF38 /* DMHttpClient.m */; };
+		0D619B2D20AA966C00E9618D /* VideoControlBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D10272F20188A3A00D15A54 /* VideoControlBar.m */; };
+		0D619B2E20AA966C00E9618D /* DMLayoutContst.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62712016E7080040CF38 /* DMLayoutContst.m */; };
+		0D619B2F20AA966C00E9618D /* ServerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEDED202AABB10010540D /* ServerData.m */; };
+		0D619B3020AA966C00E9618D /* DeviceSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D0B662020760F00698771 /* DeviceSelector.m */; };
+		0D619B3120AA966C00E9618D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8FE8C2016E6A100A09644 /* AppDelegate.m */; };
+		0D619B3220AA966C00E9618D /* YRKSpinningProgressIndicator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE020B2022FDDF001BF8DD /* YRKSpinningProgressIndicator.m */; };
+		0D619B3420AA966C00E9618D /* libPods-DiscoverMelody.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D197F2AA1FA62FB7C61024F5 /* libPods-DiscoverMelody.a */; };
+		0D619B3620AA966C00E9618D /* AppIcon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 0DFE02052022C088001BF8DD /* AppIcon.icns */; };
+		0D619B3720AA966C00E9618D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8FE912016E6A100A09644 /* Assets.xcassets */; };
+		0D619B3920AA966C00E9618D /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D8D0B5A20201D6200698771 /* Localizable.strings */; };
+		0D619B3A20AA966C00E9618D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DE8FE932016E6A100A09644 /* Main.storyboard */; };
 		0D6F623D2016E6ED0040CF38 /* DMCommonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62382016E6ED0040CF38 /* DMCommonModel.m */; };
 		0D6F623E2016E6ED0040CF38 /* DMUserDefaults.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F623B2016E6ED0040CF38 /* DMUserDefaults.m */; };
 		0D6F62432016E6F70040CF38 /* DMBaseDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62422016E6F70040CF38 /* DMBaseDataModel.m */; };
@@ -44,7 +147,6 @@
 		0D89AB98201B02990055BAF9 /* LoginView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D89AB97201B02990055BAF9 /* LoginView.m */; };
 		0D8D0B502020116200698771 /* DeviceSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D0B4F2020116200698771 /* DeviceSelectionViewController.m */; };
 		0D8D0B5820201D6200698771 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D8D0B5A20201D6200698771 /* Localizable.strings */; };
-		0D8D0B5E2020440E00698771 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D8D0B602020440E00698771 /* InfoPlist.strings */; };
 		0D8D0B672020760F00698771 /* DeviceSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D8D0B662020760F00698771 /* DeviceSelector.m */; };
 		0DBFF62820219A94005513E9 /* ColorButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DBFF62720219A94005513E9 /* ColorButton.m */; };
 		0DE8FE8D2016E6A100A09644 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DE8FE8C2016E6A100A09644 /* AppDelegate.m */; };
@@ -66,8 +168,14 @@
 		0D10272F20188A3A00D15A54 /* VideoControlBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoControlBar.m; sourceTree = "<group>"; };
 		0D10273620188A3A00D15A54 /* VideoControlBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoControlBar.h; sourceTree = "<group>"; };
 		0D10273720188A3A00D15A54 /* VideoCanvas.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoCanvas.m; sourceTree = "<group>"; };
+		0D1968CA20AA98FF00CCCB1B /* WeEducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeEducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D1968CB20AA98FF00CCCB1B /* DiscoverMelody copy2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DiscoverMelody copy2-Info.plist"; path = "/Users/xiaodw/Documents/Git/PublicPlatform/DiscoverMelody copy2-Info.plist"; sourceTree = "<absolute>"; };
+		0D1968CC20AA9B4B00CCCB1B /* AppIcon_discover_melody.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = AppIcon_discover_melody.icns; path = DiscoverMelody/Assets.xcassets/AppIcon_discover_melody.dataset/AppIcon_discover_melody.icns; sourceTree = "<group>"; };
+		0D1968D020AA9C4200CCCB1B /* AppIcon_we_design.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = AppIcon_we_design.icns; path = DiscoverMelody/Assets.xcassets/AppIcon_we_design.dataset/AppIcon_we_design.icns; sourceTree = "<group>"; };
+		0D1968D220AA9C7900CCCB1B /* AppIcon_we_education.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = AppIcon_we_education.icns; path = DiscoverMelody/Assets.xcassets/AppIcon_we_education.dataset/AppIcon_we_education.icns; sourceTree = "<group>"; };
 		0D23A28E20215F6F0032DFB7 /* LessonCodeField.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LessonCodeField.h; sourceTree = "<group>"; };
 		0D23A28F20215F6F0032DFB7 /* LessonCodeField.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LessonCodeField.m; sourceTree = "<group>"; };
+		0D30EA9620AAC331003F100A /* WeEducation copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "WeEducation copy-Info.plist"; path = "/Users/xiaodw/Documents/Git/PublicPlatform/WeEducation copy-Info.plist"; sourceTree = "<absolute>"; };
 		0D3EEDE7202AAB5B0010540D /* LocalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocalData.m; sourceTree = "<group>"; };
 		0D3EEDE8202AAB5B0010540D /* LocalData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocalData.h; sourceTree = "<group>"; };
 		0D3EEDEC202AABB10010540D /* ServerData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServerData.h; sourceTree = "<group>"; };
@@ -78,6 +186,8 @@
 		0D5842CA20847843000E8023 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		0D5FB5AD2029440F002E1628 /* AppData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
 		0D5FB5AE2029440F002E1628 /* AppData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
+		0D619B4020AA966C00E9618D /* WeDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D619B4120AA966D00E9618D /* DiscoverMelody copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DiscoverMelody copy-Info.plist"; path = "/Users/xiaodw/Documents/Git/PublicPlatform/DiscoverMelody copy-Info.plist"; sourceTree = "<absolute>"; };
 		0D65A65520A5456700A6D4F3 /* UrlSchemes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UrlSchemes.h; sourceTree = "<group>"; };
 		0D65A65620A5461D00A6D4F3 /* ProductConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductConfig.h; sourceTree = "<group>"; };
 		0D6F62382016E6ED0040CF38 /* DMCommonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMCommonModel.m; sourceTree = "<group>"; };
@@ -147,13 +257,12 @@
 		0D8D0B5320201CF700698771 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
 		0D8D0B5920201D6200698771 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		0D8D0B5B20201D6300698771 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
-		0D8D0B5F2020440E00698771 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		0D8D0B612020441000698771 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		0D8D0B652020760F00698771 /* DeviceSelector.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DeviceSelector.h; sourceTree = "<group>"; };
 		0D8D0B662020760F00698771 /* DeviceSelector.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DeviceSelector.m; sourceTree = "<group>"; };
+		0DBF744820AAC2C0007C76FB /* DiscoverMelody copy3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DiscoverMelody copy3-Info.plist"; path = "/Users/xiaodw/Documents/Git/PublicPlatform/DiscoverMelody copy3-Info.plist"; sourceTree = "<absolute>"; };
 		0DBFF62620219A94005513E9 /* ColorButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ColorButton.h; sourceTree = "<group>"; };
 		0DBFF62720219A94005513E9 /* ColorButton.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ColorButton.m; sourceTree = "<group>"; };
-		0DE8FE882016E6A100A09644 /* WeEducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeEducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0DE8FE882016E6A100A09644 /* DiscoverMelody.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DiscoverMelody.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DE8FE8B2016E6A100A09644 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		0DE8FE8C2016E6A100A09644 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		0DE8FE8E2016E6A100A09644 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -177,6 +286,22 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0D1968BD20AA98FF00CCCB1B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D1968BE20AA98FF00CCCB1B /* libPods-DiscoverMelody.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D619B3320AA966C00E9618D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D619B3420AA966C00E9618D /* libPods-DiscoverMelody.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DE8FE852016E6A100A09644 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,17 +533,26 @@
 		0DE8FE7F2016E6A100A09644 = {
 			isa = PBXGroup;
 			children = (
+				0D1968D220AA9C7900CCCB1B /* AppIcon_we_education.icns */,
+				0D1968D020AA9C4200CCCB1B /* AppIcon_we_design.icns */,
+				0D1968CC20AA9B4B00CCCB1B /* AppIcon_discover_melody.icns */,
 				0DE8FE8A2016E6A100A09644 /* DiscoverMelody */,
 				0DE8FE892016E6A100A09644 /* Products */,
 				94A96495739144B0F154CE85 /* Pods */,
 				C43E939D48DBFBA160EEE6F0 /* Frameworks */,
+				0D619B4120AA966D00E9618D /* DiscoverMelody copy-Info.plist */,
+				0D1968CB20AA98FF00CCCB1B /* DiscoverMelody copy2-Info.plist */,
+				0DBF744820AAC2C0007C76FB /* DiscoverMelody copy3-Info.plist */,
+				0D30EA9620AAC331003F100A /* WeEducation copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
 		0DE8FE892016E6A100A09644 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0DE8FE882016E6A100A09644 /* WeEducation.app */,
+				0DE8FE882016E6A100A09644 /* DiscoverMelody.app */,
+				0D619B4020AA966C00E9618D /* WeDesign.app */,
+				0D1968CA20AA98FF00CCCB1B /* WeEducation.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -442,7 +576,6 @@
 				0DFE02052022C088001BF8DD /* AppIcon.icns */,
 				0D8D0B5A20201D6200698771 /* Localizable.strings */,
 				0DE8FE932016E6A100A09644 /* Main.storyboard */,
-				0D8D0B602020440E00698771 /* InfoPlist.strings */,
 				0DE8FE962016E6A100A09644 /* Info.plist */,
 				0DE8FE972016E6A200A09644 /* main.m */,
 			);
@@ -482,6 +615,46 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		0D19688D20AA98FF00CCCB1B /* WeEducation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D1968C720AA98FF00CCCB1B /* Build configuration list for PBXNativeTarget "WeEducation" */;
+			buildPhases = (
+				0D19688E20AA98FF00CCCB1B /* [CP] Check Pods Manifest.lock */,
+				0D19688F20AA98FF00CCCB1B /* Sources */,
+				0D1968BD20AA98FF00CCCB1B /* Frameworks */,
+				0D1968BF20AA98FF00CCCB1B /* Resources */,
+				0D1968C520AA98FF00CCCB1B /* [CP] Embed Pods Frameworks */,
+				0D1968C620AA98FF00CCCB1B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeEducation;
+			productName = DiscoverMelody;
+			productReference = 0D1968CA20AA98FF00CCCB1B /* WeEducation.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0D619B0320AA966C00E9618D /* WeDesign */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D619B3D20AA966C00E9618D /* Build configuration list for PBXNativeTarget "WeDesign" */;
+			buildPhases = (
+				0D619B0420AA966C00E9618D /* [CP] Check Pods Manifest.lock */,
+				0D619B0520AA966C00E9618D /* Sources */,
+				0D619B3320AA966C00E9618D /* Frameworks */,
+				0D619B3520AA966C00E9618D /* Resources */,
+				0D619B3B20AA966C00E9618D /* [CP] Embed Pods Frameworks */,
+				0D619B3C20AA966C00E9618D /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WeDesign;
+			productName = DiscoverMelody;
+			productReference = 0D619B4020AA966C00E9618D /* WeDesign.app */;
+			productType = "com.apple.product-type.application";
+		};
 		0DE8FE872016E6A100A09644 /* DiscoverMelody */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DE8FE9C2016E6A200A09644 /* Build configuration list for PBXNativeTarget "DiscoverMelody" */;
@@ -499,7 +672,7 @@
 			);
 			name = DiscoverMelody;
 			productName = DiscoverMelody;
-			productReference = 0DE8FE882016E6A100A09644 /* WeEducation.app */;
+			productReference = 0DE8FE882016E6A100A09644 /* DiscoverMelody.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -511,6 +684,12 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Beijing Discover Melody co., ltd";
 				TargetAttributes = {
+					0D19688D20AA98FF00CCCB1B = {
+						ProvisioningStyle = Automatic;
+					};
+					0D619B0320AA966C00E9618D = {
+						ProvisioningStyle = Automatic;
+					};
 					0DE8FE872016E6A100A09644 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -537,18 +716,44 @@
 			projectRoot = "";
 			targets = (
 				0DE8FE872016E6A100A09644 /* DiscoverMelody */,
+				0D619B0320AA966C00E9618D /* WeDesign */,
+				0D19688D20AA98FF00CCCB1B /* WeEducation */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0D1968BF20AA98FF00CCCB1B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D1968C020AA98FF00CCCB1B /* AppIcon.icns in Resources */,
+				0D1968C120AA98FF00CCCB1B /* Assets.xcassets in Resources */,
+				0D1968D320AA9C7A00CCCB1B /* AppIcon_we_education.icns in Resources */,
+				0D1968C320AA98FF00CCCB1B /* Localizable.strings in Resources */,
+				0D1968C420AA98FF00CCCB1B /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D619B3520AA966C00E9618D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D619B3620AA966C00E9618D /* AppIcon.icns in Resources */,
+				0D619B3720AA966C00E9618D /* Assets.xcassets in Resources */,
+				0D1968D120AA9C4200CCCB1B /* AppIcon_we_design.icns in Resources */,
+				0D619B3920AA966C00E9618D /* Localizable.strings in Resources */,
+				0D619B3A20AA966C00E9618D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DE8FE862016E6A100A09644 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0DFE02062022C088001BF8DD /* AppIcon.icns in Resources */,
 				0DE8FE922016E6A100A09644 /* Assets.xcassets in Resources */,
-				0D8D0B5E2020440E00698771 /* InfoPlist.strings in Resources */,
+				0D1968CD20AA9B4B00CCCB1B /* AppIcon_discover_melody.icns in Resources */,
 				0D8D0B5820201D6200698771 /* Localizable.strings in Resources */,
 				0DE8FE952016E6A100A09644 /* Main.storyboard in Resources */,
 			);
@@ -557,6 +762,114 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0D19688E20AA98FF00CCCB1B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DiscoverMelody-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D1968C520AA98FF00CCCB1B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DiscoverMelody/Pods-DiscoverMelody-frameworks.sh",
+				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DevMateKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscoverMelody/Pods-DiscoverMelody-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D1968C620AA98FF00CCCB1B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DiscoverMelody/Pods-DiscoverMelody-resources.sh",
+				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DevMateKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscoverMelody/Pods-DiscoverMelody-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D619B0420AA966C00E9618D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DiscoverMelody-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D619B3B20AA966C00E9618D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DiscoverMelody/Pods-DiscoverMelody-frameworks.sh",
+				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DevMateKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscoverMelody/Pods-DiscoverMelody-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		0D619B3C20AA966C00E9618D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-DiscoverMelody/Pods-DiscoverMelody-resources.sh",
+				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DevMateKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscoverMelody/Pods-DiscoverMelody-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		268FBFF6DDB7B7CC44600E7F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -614,6 +927,110 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0D19688F20AA98FF00CCCB1B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D19689020AA98FF00CCCB1B /* DMConfigManager.m in Sources */,
+				0D19689120AA98FF00CCCB1B /* DMVideoReplayData.m in Sources */,
+				0D19689220AA98FF00CCCB1B /* DMHomeDataModel.m in Sources */,
+				0D19689320AA98FF00CCCB1B /* VideoCanvas.m in Sources */,
+				0D19689420AA98FF00CCCB1B /* DMApiModel.m in Sources */,
+				0D19689520AA98FF00CCCB1B /* DMClassDataModel.m in Sources */,
+				0D19689620AA98FF00CCCB1B /* STOverlayView.m in Sources */,
+				0D19689720AA98FF00CCCB1B /* ViewController.m in Sources */,
+				0D19689820AA98FF00CCCB1B /* DMLoginDataModel.m in Sources */,
+				0D19689920AA98FF00CCCB1B /* DMSecretKeyManager.m in Sources */,
+				0D19689A20AA98FF00CCCB1B /* DMBaseDataModel.m in Sources */,
+				0D19689B20AA98FF00CCCB1B /* DMUserDefaults.m in Sources */,
+				0D19689C20AA98FF00CCCB1B /* STOverlayController.m in Sources */,
+				0D19689D20AA98FF00CCCB1B /* STOverlayWindow.m in Sources */,
+				0D19689E20AA98FF00CCCB1B /* VideoView.m in Sources */,
+				0D19689F20AA98FF00CCCB1B /* LessonCodeField.m in Sources */,
+				0D1968A020AA98FF00CCCB1B /* OverlayView.m in Sources */,
+				0D1968A120AA98FF00CCCB1B /* DeviceSelectionViewController.m in Sources */,
+				0D1968A220AA98FF00CCCB1B /* DMAnswerData.m in Sources */,
+				0D1968A320AA98FF00CCCB1B /* DMCommonModel.m in Sources */,
+				0D1968A420AA98FF00CCCB1B /* DMCloudConfigData.m in Sources */,
+				0D1968A520AA98FF00CCCB1B /* AppData.m in Sources */,
+				0D1968A620AA98FF00CCCB1B /* LocalData.m in Sources */,
+				0D1968A720AA98FF00CCCB1B /* VideoStatusBar.m in Sources */,
+				0D1968A820AA98FF00CCCB1B /* DMClassFileDataModel.m in Sources */,
+				0D1968A920AA98FF00CCCB1B /* LogData.m in Sources */,
+				0D1968AA20AA98FF00CCCB1B /* ColorButton.m in Sources */,
+				0D1968AB20AA98FF00CCCB1B /* DMCustomerDataModel.m in Sources */,
+				0D1968AC20AA98FF00CCCB1B /* DMTools.m in Sources */,
+				0D1968AD20AA98FF00CCCB1B /* DMConst.m in Sources */,
+				0D1968AE20AA98FF00CCCB1B /* DMCourseDatasModel.m in Sources */,
+				0D1968AF20AA98FF00CCCB1B /* CountDownClock.m in Sources */,
+				0D1968B020AA98FF00CCCB1B /* DMQuestData.m in Sources */,
+				0D1968B120AA98FF00CCCB1B /* DMSetConfigData.m in Sources */,
+				0D1968B220AA98FF00CCCB1B /* main.m in Sources */,
+				0D1968B320AA98FF00CCCB1B /* DMAccount.m in Sources */,
+				0D1968B420AA98FF00CCCB1B /* LoginView.m in Sources */,
+				0D1968B520AA98FF00CCCB1B /* DMRequestModel.m in Sources */,
+				0D1968B620AA98FF00CCCB1B /* DMHttpClient.m in Sources */,
+				0D1968B720AA98FF00CCCB1B /* VideoControlBar.m in Sources */,
+				0D1968B820AA98FF00CCCB1B /* DMLayoutContst.m in Sources */,
+				0D1968B920AA98FF00CCCB1B /* ServerData.m in Sources */,
+				0D1968BA20AA98FF00CCCB1B /* DeviceSelector.m in Sources */,
+				0D1968BB20AA98FF00CCCB1B /* AppDelegate.m in Sources */,
+				0D1968BC20AA98FF00CCCB1B /* YRKSpinningProgressIndicator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0D619B0520AA966C00E9618D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D619B0620AA966C00E9618D /* DMConfigManager.m in Sources */,
+				0D619B0720AA966C00E9618D /* DMVideoReplayData.m in Sources */,
+				0D619B0820AA966C00E9618D /* DMHomeDataModel.m in Sources */,
+				0D619B0920AA966C00E9618D /* VideoCanvas.m in Sources */,
+				0D619B0A20AA966C00E9618D /* DMApiModel.m in Sources */,
+				0D619B0B20AA966C00E9618D /* DMClassDataModel.m in Sources */,
+				0D619B0C20AA966C00E9618D /* STOverlayView.m in Sources */,
+				0D619B0D20AA966C00E9618D /* ViewController.m in Sources */,
+				0D619B0E20AA966C00E9618D /* DMLoginDataModel.m in Sources */,
+				0D619B0F20AA966C00E9618D /* DMSecretKeyManager.m in Sources */,
+				0D619B1020AA966C00E9618D /* DMBaseDataModel.m in Sources */,
+				0D619B1120AA966C00E9618D /* DMUserDefaults.m in Sources */,
+				0D619B1220AA966C00E9618D /* STOverlayController.m in Sources */,
+				0D619B1320AA966C00E9618D /* STOverlayWindow.m in Sources */,
+				0D619B1420AA966C00E9618D /* VideoView.m in Sources */,
+				0D619B1520AA966C00E9618D /* LessonCodeField.m in Sources */,
+				0D619B1620AA966C00E9618D /* OverlayView.m in Sources */,
+				0D619B1720AA966C00E9618D /* DeviceSelectionViewController.m in Sources */,
+				0D619B1820AA966C00E9618D /* DMAnswerData.m in Sources */,
+				0D619B1920AA966C00E9618D /* DMCommonModel.m in Sources */,
+				0D619B1A20AA966C00E9618D /* DMCloudConfigData.m in Sources */,
+				0D619B1B20AA966C00E9618D /* AppData.m in Sources */,
+				0D619B1C20AA966C00E9618D /* LocalData.m in Sources */,
+				0D619B1D20AA966C00E9618D /* VideoStatusBar.m in Sources */,
+				0D619B1E20AA966C00E9618D /* DMClassFileDataModel.m in Sources */,
+				0D619B1F20AA966C00E9618D /* LogData.m in Sources */,
+				0D619B2020AA966C00E9618D /* ColorButton.m in Sources */,
+				0D619B2120AA966C00E9618D /* DMCustomerDataModel.m in Sources */,
+				0D619B2220AA966C00E9618D /* DMTools.m in Sources */,
+				0D619B2320AA966C00E9618D /* DMConst.m in Sources */,
+				0D619B2420AA966C00E9618D /* DMCourseDatasModel.m in Sources */,
+				0D619B2520AA966C00E9618D /* CountDownClock.m in Sources */,
+				0D619B2620AA966C00E9618D /* DMQuestData.m in Sources */,
+				0D619B2720AA966C00E9618D /* DMSetConfigData.m in Sources */,
+				0D619B2820AA966C00E9618D /* main.m in Sources */,
+				0D619B2920AA966C00E9618D /* DMAccount.m in Sources */,
+				0D619B2A20AA966C00E9618D /* LoginView.m in Sources */,
+				0D619B2B20AA966C00E9618D /* DMRequestModel.m in Sources */,
+				0D619B2C20AA966C00E9618D /* DMHttpClient.m in Sources */,
+				0D619B2D20AA966C00E9618D /* VideoControlBar.m in Sources */,
+				0D619B2E20AA966C00E9618D /* DMLayoutContst.m in Sources */,
+				0D619B2F20AA966C00E9618D /* ServerData.m in Sources */,
+				0D619B3020AA966C00E9618D /* DeviceSelector.m in Sources */,
+				0D619B3120AA966C00E9618D /* AppDelegate.m in Sources */,
+				0D619B3220AA966C00E9618D /* YRKSpinningProgressIndicator.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DE8FE842016E6A100A09644 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -678,15 +1095,6 @@
 			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
-		0D8D0B602020440E00698771 /* InfoPlist.strings */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0D8D0B5F2020440E00698771 /* en */,
-				0D8D0B612020441000698771 /* zh-Hans */,
-			);
-			name = InfoPlist.strings;
-			sourceTree = "<group>";
-		};
 		0DE8FE932016E6A100A09644 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -700,6 +1108,90 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0D1968C820AA98FF00CCCB1B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 830121EF9D2E1199D46D6E31 /* Pods-DiscoverMelody.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DiscoverMelody/DiscoverMelody.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D496CTUFNL;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					PRODUCT_TYPE_WE_EDUCATION,
+				);
+				INFOPLIST_FILE = DiscoverMelody/WeEducation.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.WeEducation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0D1968C920AA98FF00CCCB1B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63A546E3355639E157F483A9 /* Pods-DiscoverMelody.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DiscoverMelody/DiscoverMelody.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D496CTUFNL;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					PRODUCT_TYPE_WE_EDUCATION,
+				);
+				INFOPLIST_FILE = DiscoverMelody/WeEducation.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.WeEducation;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		0D619B3E20AA966C00E9618D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 830121EF9D2E1199D46D6E31 /* Pods-DiscoverMelody.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DiscoverMelody/DiscoverMelody.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D496CTUFNL;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					PRODUCT_TYPE_WE_DESIGN,
+				);
+				INFOPLIST_FILE = DiscoverMelody/WeDesign.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.WeDesign;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		0D619B3F20AA966C00E9618D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 63A546E3355639E157F483A9 /* Pods-DiscoverMelody.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DiscoverMelody/DiscoverMelody.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = D496CTUFNL;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					PRODUCT_TYPE_WE_DESIGN,
+				);
+				INFOPLIST_FILE = DiscoverMelody/WeDesign.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.WeDesign;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		0DE8FE9A2016E6A200A09644 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -814,10 +1306,15 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D496CTUFNL;
-				INFOPLIST_FILE = DiscoverMelody/Info.plist;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					PRODUCT_TYPE_DISCOVER_MELODY,
+				);
+				INFOPLIST_FILE = DiscoverMelody/DiscoverMelody.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.WeEducation;
-				PRODUCT_NAME = WeEducation;
+				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.DiscoverMelody;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
@@ -830,16 +1327,39 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = D496CTUFNL;
-				INFOPLIST_FILE = DiscoverMelody/Info.plist;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"COCOAPODS=1",
+					PRODUCT_TYPE_DISCOVER_MELODY,
+				);
+				INFOPLIST_FILE = DiscoverMelody/DiscoverMelody.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.WeEducation;
-				PRODUCT_NAME = WeEducation;
+				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.DiscoverMelody;
+				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0D1968C720AA98FF00CCCB1B /* Build configuration list for PBXNativeTarget "WeEducation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D1968C820AA98FF00CCCB1B /* Debug */,
+				0D1968C920AA98FF00CCCB1B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		0D619B3D20AA966C00E9618D /* Build configuration list for PBXNativeTarget "WeDesign" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D619B3E20AA966C00E9618D /* Debug */,
+				0D619B3F20AA966C00E9618D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		0DE8FE832016E6A100A09644 /* Build configuration list for PBXProject "DiscoverMelody" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

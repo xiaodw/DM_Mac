@@ -3,7 +3,7 @@
 "1UK-8n-QPP.title" = "Customize Toolbar…";
 
 /* Class = "NSMenuItem"; title = "WeEducation"; ObjectID = "1Xt-HY-uBw"; */
-"1Xt-HY-uBw.title" = "WeEducation";
+"1Xt-HY-uBw.title" = "Window";
 
 /* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; */
 "1b7-l0-nxx.title" = "Find";
@@ -36,7 +36,7 @@
 "4J7-dP-txa.title" = "进入全屏";
 
 /* Class = "NSMenuItem"; title = "Quit WeEducation"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "退出 WeEducation";
+"4sb-4s-VLi.title" = "退出";
 
 /* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
 "5QF-Oa-p0T.title" = "编辑";
@@ -45,7 +45,7 @@
 "5Vv-lz-BsD.title" = "Copy Style";
 
 /* Class = "NSMenuItem"; title = "About WeEducation"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "关于 WeEducation";
+"5kV-Vb-QxS.title" = "关于";
 
 /* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
 "6dh-zS-Vam.title" = "重做";
@@ -87,7 +87,7 @@
 "F2S-fz-NVQ.title" = "帮助";
 
 /* Class = "NSMenuItem"; title = "WeEducation Help"; ObjectID = "FKE-Sm-Kum"; */
-"FKE-Sm-Kum.title" = "WeEducation 帮助";
+"FKE-Sm-Kum.title" = "帮助";
 
 /* Class = "NSMenuItem"; title = "Text"; ObjectID = "Fal-I4-PZk"; */
 "Fal-I4-PZk.title" = "Text";
@@ -129,7 +129,7 @@
 "IAo-SY-fd9.title" = "打开…";
 
 /* Class = "NSWindow"; title = "Window"; ObjectID = "IQv-IB-iLA"; */
-"IQv-IB-iLA.title" = "WeEducation";
+"IQv-IB-iLA.title" = "Window";
 
 /* Class = "NSMenuItem"; title = "Justify"; ObjectID = "J5U-5w-g23"; */
 "J5U-5w-g23.title" = "Justify";
@@ -168,7 +168,7 @@
 "OaQ-X3-Vso.title" = "Baseline";
 
 /* Class = "NSMenuItem"; title = "Hide WeEducation"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "隐藏 WeEducation";
+"Olw-nP-bQN.title" = "隐藏";
 
 /* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "OwM-mh-QMV"; */
 "OwM-mh-QMV.title" = "查找上一个";
@@ -360,7 +360,7 @@
 "tlD-Oa-oAM.title" = "Kern";
 
 /* Class = "NSMenu"; title = "WeEducation"; ObjectID = "uQy-DD-JDr"; */
-"uQy-DD-JDr.title" = "WeEducation";
+"uQy-DD-JDr.title" = "Window";
 
 /* Class = "NSMenuItem"; title = "Cut"; ObjectID = "uRl-iY-unG"; */
 "uRl-iY-unG.title" = "剪切";

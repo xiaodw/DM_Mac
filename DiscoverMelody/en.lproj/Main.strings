@@ -3,7 +3,7 @@
 "1UK-8n-QPP.title" = "Customize Toolbar…";
 
 /* Class = "NSMenuItem"; title = "WeEducation"; ObjectID = "1Xt-HY-uBw"; */
-"1Xt-HY-uBw.title" = "WeEducation";
+"1Xt-HY-uBw.title" = "Window";
 
 /* Class = "NSMenu"; title = "Find"; ObjectID = "1b7-l0-nxx"; */
 "1b7-l0-nxx.title" = "Find";
@@ -36,7 +36,7 @@
 "4J7-dP-txa.title" = "Enter Full Screen";
 
 /* Class = "NSMenuItem"; title = "Quit WeEducation"; ObjectID = "4sb-4s-VLi"; */
-"4sb-4s-VLi.title" = "Quit WeEducation";
+"4sb-4s-VLi.title" = "Quit";
 
 /* Class = "NSMenuItem"; title = "Edit"; ObjectID = "5QF-Oa-p0T"; */
 "5QF-Oa-p0T.title" = "Edit";
@@ -45,7 +45,7 @@
 "5Vv-lz-BsD.title" = "Copy Style";
 
 /* Class = "NSMenuItem"; title = "About WeEducation"; ObjectID = "5kV-Vb-QxS"; */
-"5kV-Vb-QxS.title" = "About WeEducation";
+"5kV-Vb-QxS.title" = "About";
 
 /* Class = "NSMenuItem"; title = "Redo"; ObjectID = "6dh-zS-Vam"; */
 "6dh-zS-Vam.title" = "Redo";
@@ -87,7 +87,7 @@
 "F2S-fz-NVQ.title" = "Help";
 
 /* Class = "NSMenuItem"; title = "WeEducation Help"; ObjectID = "FKE-Sm-Kum"; */
-"FKE-Sm-Kum.title" = "WeEducation Help";
+"FKE-Sm-Kum.title" = "Help";
 
 /* Class = "NSMenuItem"; title = "Text"; ObjectID = "Fal-I4-PZk"; */
 "Fal-I4-PZk.title" = "Text";
@@ -168,7 +168,7 @@
 "OaQ-X3-Vso.title" = "Baseline";
 
 /* Class = "NSMenuItem"; title = "Hide WeEducation"; ObjectID = "Olw-nP-bQN"; */
-"Olw-nP-bQN.title" = "Hide WeEducation";
+"Olw-nP-bQN.title" = "Hide";
 
 /* Class = "NSMenuItem"; title = "Find Previous"; ObjectID = "OwM-mh-QMV"; */
 "OwM-mh-QMV.title" = "Find Previous";
@@ -360,7 +360,7 @@
 "tlD-Oa-oAM.title" = "Kern";
 
 /* Class = "NSMenu"; title = "WeEducation"; ObjectID = "uQy-DD-JDr"; */
-"uQy-DD-JDr.title" = "WeEducation";
+"uQy-DD-JDr.title" = "Window";
 
 /* Class = "NSMenuItem"; title = "Cut"; ObjectID = "uRl-iY-unG"; */
 "uRl-iY-unG.title" = "Cut";

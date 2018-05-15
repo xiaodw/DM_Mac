@@ -12,7 +12,7 @@
 #import "DMConfig.h"
 #import "DMConfigManager.h"
 #import <DevMateKit/DevMateKit.h>
-
+#import "ProductConfig.h"
 
 @interface AppDelegate ()
 @property NSSize loginSize;
@@ -31,6 +31,13 @@
     }
     
     [self.window setDelegate:self];
+#if defined(PRODUCT_TYPE_WE_EDUCATION)
+    [self.window setTitle:@"WeEducation"];
+#elif defined(PRODUCT_TYPE_DISCOVER_MELODY)
+    [self.window setTitle:NSLocalizedString(@"WINDOW_TITLE_DISCOVER_MELODY", nil)];
+#elif defined(PRODUCT_TYPE_WE_DESIGN)
+    [self.window setTitle:@"WeDesign"];
+#endif
     
     [DevMateKit sendTrackingReport:nil delegate:nil];
     [DevMateKit setupIssuesController:nil reportingUnhandledIssues:YES];

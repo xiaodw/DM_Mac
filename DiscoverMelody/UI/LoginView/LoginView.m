@@ -10,6 +10,7 @@
 #import <Masonry.h>
 #import "LessonCodeField.h"
 #import "ColorButton.h"
+#import "ProductConfig.h"
 
 @interface LoginView()
 @property (strong,nonatomic)NSImageView* imageViewBackgroud;
@@ -40,12 +41,24 @@
 
 -(void)setupSubViews {
     self.imageViewBackgroud = [[NSImageView alloc]initWithFrame:NSMakeRect(0, 0, 64, 64)];
-    [self.imageViewBackgroud setImage:[NSImage imageNamed:@"loginBackgroud"]];
+#if defined(PRODUCT_TYPE_WE_EDUCATION)
+    [self.imageViewBackgroud setImage:[NSImage imageNamed:@"login_bg_we_education"]];
+#elif defined(PRODUCT_TYPE_DISCOVER_MELODY)
+    [self.imageViewBackgroud setImage:[NSImage imageNamed:@"login_bg_discover_melody"]];
+#elif defined(PRODUCT_TYPE_WE_DESIGN)
+    [self.imageViewBackgroud setImage:[NSImage imageNamed:@"login_bg_wedesign"]];
+#endif
     [self.imageViewBackgroud setImageScaling:YES];
     [self addSubview:self.imageViewBackgroud];
     
     self.imageViewLogo = [[NSImageView alloc]initWithFrame:NSMakeRect(0, 0, 64, 64)];
-    [self.imageViewLogo setImage:[NSImage imageNamed:NSLocalizedString(@"LOGIN_VIEW_LOGO_IMG_NAME", nil)]];
+#if defined(PRODUCT_TYPE_WE_EDUCATION)
+    [self.imageViewLogo setImage:[NSImage imageNamed:@"login_logo_we_education"]];
+#elif defined(PRODUCT_TYPE_DISCOVER_MELODY)
+    [self.imageViewLogo setImage:[NSImage imageNamed:NSLocalizedString(@"LOGIN_VIEW_LOGO_IMG_NAME_DISCOVER_MELODY", nil)]];
+#elif defined(PRODUCT_TYPE_WE_DESIGN)
+    [self.imageViewLogo setImage:[NSImage imageNamed:@"login_logo-we_design"]];
+#endif
     [self.imageViewLogo setImageScaling:YES];
     [self addSubview:self.imageViewLogo];
 
@@ -126,9 +139,9 @@
         __block int logoHeight = NSLocalizedString(@"LOGIN_VIEW_LOGO_IMG_HEIGHT",nil).intValue;
         __block int logoAboveOffset = NSLocalizedString(@"LOGIN_VIEW_LOGO_OFFSET_ABOVE_CODE_TEXT_FIELD",nil).intValue;
         make.top.mas_equalTo(self.lessonCodeField.mas_top).with.offset(-(logoAboveOffset + logoHeight));
-        make.left.mas_equalTo(self.mas_centerX).with.offset(-74);
-        make.right.mas_equalTo(self.mas_centerX).with.offset(logoWidth - 74);
-        make.bottom.mas_equalTo(self.lessonCodeField.mas_top).with.offset(-logoAboveOffset);
+        make.left.mas_equalTo(self.mas_centerX).with.offset(-(logoWidth / 2));
+        make.width.mas_equalTo(logoWidth);
+        make.height.mas_equalTo(logoHeight);
     }];
     
     [self.cameraSelector mas_makeConstraints:^(MASConstraintMaker *make) {

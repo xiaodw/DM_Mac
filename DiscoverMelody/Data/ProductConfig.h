@@ -10,7 +10,7 @@
 #define ProductConfig_h
 
 //#define PRODUCT_TYPE_DISCOVER_MELODY
-#define PRODUCT_TYPE_WE_DESIGN
+//#define PRODUCT_TYPE_WE_DESIGN
 //#define PRODUCT_TYPE_WE_EDUCATION
 
 #define DEBUG_ENV 0    // 是否为调试环境
