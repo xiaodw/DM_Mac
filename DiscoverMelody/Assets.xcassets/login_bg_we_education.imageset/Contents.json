@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "login_bg_we_education.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "login_bg_we_education.jpg",
       "scale" : "2x"
     },
     {
