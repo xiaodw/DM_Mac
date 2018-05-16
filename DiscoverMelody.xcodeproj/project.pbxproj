@@ -188,7 +188,6 @@
 		0D5FB5AE2029440F002E1628 /* AppData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppData.m; sourceTree = "<group>"; };
 		0D619B4020AA966C00E9618D /* WeDesign.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeDesign.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0D619B4120AA966D00E9618D /* DiscoverMelody copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "DiscoverMelody copy-Info.plist"; path = "/Users/xiaodw/Documents/Git/PublicPlatform/DiscoverMelody copy-Info.plist"; sourceTree = "<absolute>"; };
-		0D65A65520A5456700A6D4F3 /* UrlSchemes.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UrlSchemes.h; sourceTree = "<group>"; };
 		0D65A65620A5461D00A6D4F3 /* ProductConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ProductConfig.h; sourceTree = "<group>"; };
 		0D6F62382016E6ED0040CF38 /* DMCommonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMCommonModel.m; sourceTree = "<group>"; };
 		0D6F623A2016E6ED0040CF38 /* DMUserDefaults.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMUserDefaults.h; sourceTree = "<group>"; };
@@ -370,7 +369,6 @@
 				0D65A65620A5461D00A6D4F3 /* ProductConfig.h */,
 				0D50579D2071E02200DF1CB2 /* UrlConfig.h */,
 				0D751BBD20A0389500E738E5 /* ColorConfig.h */,
-				0D65A65520A5456700A6D4F3 /* UrlSchemes.h */,
 			);
 			path = Data;
 			sourceTree = "<group>";

@@ -105,8 +105,16 @@ enum CANVAS_TYPE_ {
     }
 }
 
--(void)resizeSubviewsWithOldSize:(NSSize)oldSize {
-    [super resizeSubviewsWithOldSize:oldSize];
+//-(void)resizeSubviewsWithOldSize:(NSSize)oldSize {
+//    [super resizeSubviewsWithOldSize:oldSize];
+//    if (self.layoutMode == LAYOUT_MODE_SL) {
+//        [self layoutSmallLargeView];
+//    } else {
+//        [self layoutLeftRightView];
+//    }
+//}
+
+-(void)layoutSubViews {
     if (self.layoutMode == LAYOUT_MODE_SL) {
         [self layoutSmallLargeView];
     } else {

@@ -40,10 +40,10 @@
     // Drawing code here.
 }
 
--(void)resizeSubviewsWithOldSize:(NSSize)oldSize {
-    [super resizeSubviewsWithOldSize:oldSize];
-    [self layoutSubViews];
-}
+//-(void)resizeSubviewsWithOldSize:(NSSize)oldSize {
+//    [super resizeSubviewsWithOldSize:oldSize];
+//    [self layoutSubViews];
+//}
 
 -(instancetype)initWithFrame:(NSRect)frameRect {
     self = [super initWithFrame:frameRect];

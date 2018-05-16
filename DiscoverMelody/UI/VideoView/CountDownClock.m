@@ -12,7 +12,7 @@
 
 @interface CountDownClock()
 @property (strong,nonatomic)NSImageView* imageViewAlarm;
-@property (strong,nonatomic)NSTextView* textViewNotice;
+@property (strong,nonatomic)NSTextField* textViewNotice;
 @property (strong,nonatomic)NSTimer* timerCount;
 @property double countDownEnd;
 @property enum COUNT_DOWN_STATUS countDownStatus;
@@ -44,13 +44,14 @@
     [self.imageViewAlarm.layer setBackgroundColor:[NSColor clearColor].CGColor];
     [self addSubview:self.imageViewAlarm];
     
-    self.textViewNotice = [[NSTextView alloc]initWithFrame:NSMakeRect(0, 0, 176, 176)];
+    self.textViewNotice = [[NSTextField alloc]initWithFrame:NSMakeRect(0, 0, 176, 176)];
     [self.textViewNotice setWantsLayer:YES];
     [self.textViewNotice setBackgroundColor:[NSColor clearColor]];
     [self.textViewNotice setTextColor:[NSColor whiteColor]];
     [self.textViewNotice setEditable:NO];
     [self.textViewNotice setSelectable:NO];
-    [self.textViewNotice setString:@"- - -"];
+    [self.textViewNotice setBordered:NO];
+    [self.textViewNotice setStringValue:@"- - -"];
     [self.textViewNotice setAlignment:NSTextAlignmentCenter];
     [self addSubview:self.textViewNotice];
 }
@@ -91,7 +92,7 @@
         return;
     }
     
-    [self.textViewNotice setString:[self fomattedNotice:intervalSince1970]];
+    [self.textViewNotice setStringValue:[self fomattedNotice:intervalSince1970]];
 }
 
 -(void)startCountDownUntil:(double)utcEnd {

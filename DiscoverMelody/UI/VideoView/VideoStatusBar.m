@@ -12,8 +12,8 @@
 
 @interface VideoStatusBar()
 @property (strong,nonatomic)NSImageView* imageViewTime;
-@property (strong,nonatomic)NSTextView* textViewTime;
-@property (strong,nonatomic)NSTextView* textViewRecStatus;
+@property (strong,nonatomic)NSTextField* textViewTime;
+@property (strong,nonatomic)NSTextField* textViewRecStatus;
 @property (strong,nonatomic)NSTimer* timerCount;
 @property (strong,nonatomic)NSColor* myRedColor;
 @property (strong,nonatomic)NSImage* myRedClock;
@@ -57,24 +57,25 @@
     [self.imageViewTime setImageScaling:YES];
     [self addSubview:self.imageViewTime];
     
-    self.textViewTime = [[NSTextView alloc]initWithFrame:NSMakeRect(0, 0, 176, 176)];
+    self.textViewTime = [[NSTextField alloc]initWithFrame:NSMakeRect(0, 0, 176, 176)];
     [self.textViewTime setWantsLayer:YES];
     [self.textViewTime setBackgroundColor:[NSColor clearColor]];
     [self.textViewTime setTextColor:[NSColor whiteColor]];
     [self.textViewTime setEditable:NO];
     [self.textViewTime setSelectable:NO];
-    [self.textViewTime setString:@"00:00:00"];
+    [self.textViewTime setBordered:NO];
+    [self.textViewTime setStringValue:@"00:00:00"];
     [self.textViewTime setFont:[NSFont fontWithName:NSLocalizedString(@"GLOBAL_FONT_18_NAME", nil) size:NSLocalizedString(@"GLOBAL_FONT_18_SIZE", nil).intValue]];
     [self addSubview:self.textViewTime];
     
-    self.textViewRecStatus = [[NSTextView alloc]initWithFrame:NSMakeRect(0, 0, 176, 176)];
+    self.textViewRecStatus = [[NSTextField alloc]initWithFrame:NSMakeRect(0, 0, 176, 176)];
     [self.textViewRecStatus setWantsLayer:YES];
     [self.textViewRecStatus setBackgroundColor:[NSColor clearColor]];
     [self.textViewRecStatus setTextColor:[NSColor colorWithRed:3/255.f green:213/255.f blue:42/255.f alpha:1.f]];
-    //[self.textViewStatus setTextColor:[NSColor whiteColor]];
     [self.textViewRecStatus setEditable:NO];
     [self.textViewRecStatus setSelectable:NO];
-    [self.textViewRecStatus setString:NSLocalizedString(@"VIDEO_VIEW_RECORD_STATUS", nil)];
+    [self.textViewRecStatus setBordered:NO];
+    [self.textViewRecStatus setStringValue:NSLocalizedString(@"VIDEO_VIEW_RECORD_STATUS", nil)];
     [self.textViewRecStatus setFont:[NSFont fontWithName:NSLocalizedString(@"GLOBAL_FONT_18_NAME", nil) size:NSLocalizedString(@"GLOBAL_FONT_18_SIZE", nil).intValue]];
     [self addSubview:self.textViewRecStatus];
 }
@@ -148,7 +149,7 @@
         }
     }
     
-    [self.textViewTime setString:[self fomattedDisplayWithInterval:intervalSince1970]];
+    [self.textViewTime setStringValue:[self fomattedDisplayWithInterval:intervalSince1970]];
 }
 
 -(void)startCountBegin:(double)begin Red:(double)red Warning:(double)warn End:(double)end {

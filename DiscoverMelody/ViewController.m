@@ -171,6 +171,7 @@ enum APP_DATA_STATUS {
 
 -(void)windowDidResize:(NSNotification *)notification {
     [self updateViewConstraints];
+    [self.videoView layoutSubViews];
 }
 
 -(BOOL)injectWindowShouldClose:(NSWindow *)sender {

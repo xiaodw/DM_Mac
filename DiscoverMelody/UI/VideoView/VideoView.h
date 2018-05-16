@@ -41,5 +41,5 @@ enum USER_TYPE {
 // -- interface for countdown --
 -(void)startCountDownUntil:(double)utcEnd;
 -(void)setStopAction:(SEL)action withTarget:(id)target;
-
+-(void)layoutSubViews;
 @end
