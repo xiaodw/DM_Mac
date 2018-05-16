@@ -89,17 +89,17 @@
     }];
     
     [self.textViewTime mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.imageViewTime.mas_centerY).with.offset(-12);
+        make.top.mas_equalTo(self.imageViewTime.mas_centerY).with.offset(-17);
         make.left.mas_equalTo(self.imageViewTime.mas_right).with.offset(12);
         make.right.mas_equalTo(self.mas_centerX);
-        make.bottom.mas_equalTo(self.imageViewTime.mas_centerY).with.offset(12);
+        make.bottom.mas_equalTo(self.imageViewTime.mas_centerY).with.offset(9);
     }];
     
     [self.textViewRecStatus mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.top.mas_equalTo(self.imageViewTime).with.offset(-4);
+        make.top.mas_equalTo(self.imageViewTime).with.offset(-8);
         make.left.mas_equalTo(self.mas_right).with.offset(-130);
         make.right.mas_equalTo(self.mas_right).with.offset(-32);
-        make.bottom.mas_equalTo(self.mas_bottom).with.offset(-28);
+        make.bottom.mas_equalTo(self.mas_bottom).with.offset(-24);
     }];
 }
 
