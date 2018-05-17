@@ -694,7 +694,6 @@ enum APP_DATA_STATUS {
         [self.videoView.videoCanvasAssistant setUserOnline:YES];
         videoCanvas.view = self.videoView.videoCanvasAssistant.videoView;
     }
-    //videoCanvas.view = self.videoView.videoCanvasStudent.videoView;
     
     videoCanvas.renderMode = AgoraRtc_Render_Fit;
     [self.agoraKit setupLocalVideo:videoCanvas];

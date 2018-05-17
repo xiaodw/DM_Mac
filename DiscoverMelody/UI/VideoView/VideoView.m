@@ -257,14 +257,14 @@ enum CANVAS_TYPE_ {
     
     //NSViewAnimation* viewAnimation;
     for (NSUInteger i = 0; i < [self.slCanvasArray count]; i++) {
-        [[self.slCanvasArray objectAtIndex:i] removeFromSuperview];
+        //[[self.slCanvasArray objectAtIndex:i] removeFromSuperview];
         [self addSubview:[self.slCanvasArray objectAtIndex:i]];
     }
-    [self.countDownClock removeFromSuperview];
+//    [self.countDownClock removeFromSuperview];
     [self addSubview:self.countDownClock];
-    [self.statusBar removeFromSuperview];
+//    [self.statusBar removeFromSuperview];
     [self addSubview:self.statusBar];
-    [self.controlBar removeFromSuperview];
+//    [self.controlBar removeFromSuperview];
     [self addSubview:self.controlBar];
     [[self.slCanvasArray objectAtIndex:0]setShowBoarder:NO];
     [[self.slCanvasArray objectAtIndex:1]setShowBoarder:YES];
@@ -418,17 +418,17 @@ enum CANVAS_TYPE_ {
     
     NSLog(@"layoutLeftRightView --> Other:%d Assistant:%d Mine:%d", [self.videoCanvasTeacher getUserOnline], [self.videoCanvasAssistant getUserOnline], [self.videoCanvasStudent getUserOnline]);
     
-    [self.videoCanvasTeacher removeFromSuperview];
+//    [self.videoCanvasTeacher removeFromSuperview];
     [self addSubview:self.videoCanvasTeacher];
-    [self.videoCanvasAssistant removeFromSuperview];
+//    [self.videoCanvasAssistant removeFromSuperview];
     [self addSubview:self.videoCanvasAssistant];
-    [self.videoCanvasStudent removeFromSuperview];
+//    [self.videoCanvasStudent removeFromSuperview];
     [self addSubview:self.videoCanvasStudent];
-    [self.countDownClock removeFromSuperview];
+//    [self.countDownClock removeFromSuperview];
     [self addSubview:self.countDownClock];
-    [self.statusBar removeFromSuperview];
+//    [self.statusBar removeFromSuperview];
     [self addSubview:self.statusBar];
-    [self.controlBar removeFromSuperview];
+//    [self.controlBar removeFromSuperview];
     [self addSubview:self.controlBar];
     
     int onlineUserCount = 0;
