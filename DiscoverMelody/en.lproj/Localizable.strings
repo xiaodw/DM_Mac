@@ -55,14 +55,14 @@
 "ALERT_BUTTON_CANCEL" = "Cancel";
 "ALERT_EXIT_LIVE_ROOM" = "Are you sure you want to end the session?";
 "ALERT_LIVE_AUTO_CLOSE" = "After confirmation, your session will be disconnected";
-"ALERT_UPDATE_TITLE" = "new version found";
-"ALERT_START_SHARE_SCREEN_TITLE" = "Are you sure you want to share screen";
-"ALERT_START_SHARE_SCREEN_MSG" = "After confirmation,your screen will be shared";
-"ALERT_STOP_SHARE_SCREEN_TITLE" = "Are you sure you want to end sharing scree";
-"ALERT_STOP_SHARE_SCREEN_MSG" = "After confirmation,your screen sharing will be ended";
+"ALERT_UPDATE_TITLE" = "New Version Available";
+"ALERT_START_SHARE_SCREEN_TITLE" = "Share Screen";
+"ALERT_START_SHARE_SCREEN_MSG" = "Do you want to share your screen?";
+"ALERT_STOP_SHARE_SCREEN_TITLE" = "Stop Sharing Screen";
+"ALERT_STOP_SHARE_SCREEN_MSG" = "Do you want to stop sharing screen?";
 "OVERLAY_MSG_FONT_SIZE" = "16";
 "OVERLAY_MAX_WIDTH" = "400";
 "OVERLAY_MAX_HEIGHT" = "400";
-"OVERLAY_MSG_UNKOWN_REASON" = "Unkown reason";
+"OVERLAY_MSG_UNKOWN_REASON" = "Unknown error";
 "OVERLAY_MSG_UNEXPECTED_DATA" = "Unexpected data";
 
