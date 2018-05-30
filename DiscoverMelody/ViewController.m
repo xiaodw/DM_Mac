@@ -472,7 +472,7 @@ enum APP_DATA_STATUS {
         
         [self.videoView setUserTypeMine:self.userType.integerValue];
         
-        [self.videoView.statusBar setRecStatusHidden:!self.enableScreenSharing];
+        [self.videoView.statusBar setRecStatusHidden:!self.enableShowRecodingStatus];
         [self.videoView.controlBar setShareScreenEnable:self.enableScreenSharing];
         
         [[NSNotificationCenter defaultCenter]postNotificationName:DMLOGIN_STEP_1_DONE object:@"success"];

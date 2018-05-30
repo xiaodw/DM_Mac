@@ -29,7 +29,7 @@ static LogData *defaultLogData = nil;
 #if defined(PRODUCT_TYPE_WE_EDUCATION)
     dic[@"business"] = @"weedu";
 #elif defined(PRODUCT_TYPE_DISCOVER_MELODY)
-    dic[@"business"] = @"discover-melody";
+    dic[@"business"] = @"discovermelody";
 #elif defined(PRODUCT_TYPE_WE_DESIGN)
     dic[@"business"] = @"wedesign";
 #endif
