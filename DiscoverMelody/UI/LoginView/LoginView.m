@@ -115,8 +115,22 @@
                 [self.buttonJoin setEnabled:NO];
             }
         } else {
-            if (NO == self.buttonJoin.isEnabled) {
-                [self.buttonJoin setEnabled:YES];
+            NSString* lessonCode = self.lessonCodeField.textFieldCode.stringValue;
+            NSString* ripeCode = [lessonCode stringByReplacingOccurrencesOfString:@" " withString:@""];
+            ripeCode = [ripeCode stringByReplacingOccurrencesOfString:@"\r" withString:@""];
+            ripeCode = [ripeCode stringByReplacingOccurrencesOfString:@"\n" withString:@""];
+            if (![ripeCode isEqualToString:lessonCode]) {
+                self.lessonCodeField.textFieldCode.stringValue = ripeCode;
+            }
+            
+            if ([ripeCode length] > 0) {
+                if (NO == self.buttonJoin.isEnabled) {
+                    [self.buttonJoin setEnabled:YES];
+                }
+            } else {
+                if (YES == self.buttonJoin.isEnabled) {
+                    [self.buttonJoin setEnabled:NO];
+                }
             }
         }
     }
