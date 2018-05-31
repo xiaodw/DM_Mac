@@ -643,6 +643,15 @@ enum APP_DATA_STATUS {
     }
 }
 
+-(BOOL)isValidUserId:(NSUInteger)userId {
+    if (userId == self.channelUidStudent.integerValue||
+        userId == self.channelUidTeacher.integerValue ||
+        userId == self.channelUidAssistant.integerValue) {
+        return YES;
+    }
+    return NO;
+}
+
 -(NSView*)canvasViewForUser:(NSUInteger)userId {
     if (userId == self.channelUidStudent.integerValue) {
         return self.videoView.videoCanvasStudent.videoView;
@@ -680,8 +689,7 @@ enum APP_DATA_STATUS {
     if (self.audioProfile > 0 && self.audioScenario > 0) [self.agoraKit setAudioProfile:4 scenario:2];
     
     AgoraRtcVideoCanvas *videoCanvas = [[AgoraRtcVideoCanvas alloc] init];
-    videoCanvas.uid = 0;
-    // UID = 0 means we let Agora pick a UID for us
+    videoCanvas.uid = 0; // UID = 0 means we let Agora pick a UID for us
     
     // 0-学生，1-老师，2-管理员，3-助教
     if (USER_TYPE_STUDENT == self.userType.intValue) {
@@ -718,9 +726,7 @@ enum APP_DATA_STATUS {
 //- (void)rtcEngine:(AgoraRtcEngineKit *)engine firstRemoteVideoFrameOfUid:(NSUInteger)uid size:(CGSize)size elapsed:(NSInteger)elapsed {}
 
 - (void)rtcEngine:(AgoraRtcEngineKit *)engine firstRemoteVideoDecodedOfUid:(NSUInteger)uid size: (CGSize)size elapsed:(NSInteger)elapsed {
-    if (uid != self.channelUidStudent.intValue &&
-        uid != self.channelUidTeacher.integerValue &&
-        uid != self.channelUidAssistant.integerValue) {
+    if (![self isValidUserId:uid]) {
         return;
     }
 
@@ -762,10 +768,17 @@ enum APP_DATA_STATUS {
 }
 
 - (void)rtcEngine:(AgoraRtcEngineKit *)engine didJoinedOfUid:(NSUInteger)uid elapsed:(NSInteger)elapsed {
+    if (![self isValidUserId:uid]) {
+        return;
+    }
+    
     [[LogData defaultLogData]reportUserEnter:[NSString stringWithFormat:@"%lu",uid] Reporter:self.channelUidMine MeetingId:self.meetingId Token:self.userToken];
 }
 
 - (void)rtcEngine:(AgoraRtcEngineKit *)engine didOfflineOfUid:(NSUInteger)uid reason:(AgoraRtcUserOfflineReason)reason {
+    if (![self isValidUserId:uid]) {
+        return;
+    }
     
     AgoraRtcVideoCanvas *videoCanvas = [[AgoraRtcVideoCanvas alloc] init];
     videoCanvas.uid = uid;

@@ -66,6 +66,12 @@
 		0D3EEDE9202AAB5B0010540D /* LocalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEDE7202AAB5B0010540D /* LocalData.m */; };
 		0D3EEDEE202AABB10010540D /* ServerData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEDED202AABB10010540D /* ServerData.m */; };
 		0D3EEDF3202AAE8C0010540D /* LogData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D3EEDF2202AAE8C0010540D /* LogData.m */; };
+		0D41983420BFAECA00610437 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D41982720BFAECA00610437 /* Main.strings */; };
+		0D41983520BFAECA00610437 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D41982920BFAECA00610437 /* Localizable.strings */; };
+		0D41983620BFAECA00610437 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D41982B20BFAECA00610437 /* InfoPlist.strings */; };
+		0D41983720BFAECA00610437 /* Main.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D41982E20BFAECA00610437 /* Main.strings */; };
+		0D41983820BFAECA00610437 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D41983020BFAECA00610437 /* Localizable.strings */; };
+		0D41983920BFAECA00610437 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 0D41983220BFAECA00610437 /* InfoPlist.strings */; };
 		0D5FB5AF2029440F002E1628 /* AppData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D5FB5AE2029440F002E1628 /* AppData.m */; };
 		0D619B0620AA966C00E9618D /* DMConfigManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62682016E7080040CF38 /* DMConfigManager.m */; };
 		0D619B0720AA966C00E9618D /* DMVideoReplayData.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D6F62522016E6FE0040CF38 /* DMVideoReplayData.m */; };
@@ -182,6 +188,12 @@
 		0D3EEDED202AABB10010540D /* ServerData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServerData.m; sourceTree = "<group>"; };
 		0D3EEDF1202AAE8C0010540D /* LogData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LogData.h; sourceTree = "<group>"; };
 		0D3EEDF2202AAE8C0010540D /* LogData.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LogData.m; sourceTree = "<group>"; };
+		0D41982820BFAECA00610437 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Main.strings; sourceTree = "<group>"; };
+		0D41982A20BFAECA00610437 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = Localizable.strings; sourceTree = "<group>"; };
+		0D41982C20BFAECA00610437 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = InfoPlist.strings; sourceTree = "<group>"; };
+		0D41982F20BFAECA00610437 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = Main.strings; sourceTree = "<group>"; };
+		0D41983120BFAECA00610437 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = Localizable.strings; sourceTree = "<group>"; };
+		0D41983320BFAECA00610437 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = InfoPlist.strings; sourceTree = "<group>"; };
 		0D50579D2071E02200DF1CB2 /* UrlConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UrlConfig.h; sourceTree = "<group>"; };
 		0D5842CA20847843000E8023 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		0D5FB5AD2029440F002E1628 /* AppData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppData.h; sourceTree = "<group>"; };
@@ -359,6 +371,49 @@
 				0D3EEDED202AABB10010540D /* ServerData.m */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		0D41982320BFAC9100610437 /* WeEducation */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WeEducation;
+			sourceTree = "<group>";
+		};
+		0D41982420BFACBA00610437 /* WeDesign */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = WeDesign;
+			sourceTree = "<group>";
+		};
+		0D41982520BFACC800610437 /* DiscoverMelody */ = {
+			isa = PBXGroup;
+			children = (
+				0D41982620BFAECA00610437 /* en.lproj */,
+				0D41982D20BFAECA00610437 /* zh-Hans.lproj */,
+			);
+			path = DiscoverMelody;
+			sourceTree = "<group>";
+		};
+		0D41982620BFAECA00610437 /* en.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				0D41982720BFAECA00610437 /* Main.strings */,
+				0D41982920BFAECA00610437 /* Localizable.strings */,
+				0D41982B20BFAECA00610437 /* InfoPlist.strings */,
+			);
+			path = en.lproj;
+			sourceTree = "<group>";
+		};
+		0D41982D20BFAECA00610437 /* zh-Hans.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				0D41982E20BFAECA00610437 /* Main.strings */,
+				0D41983020BFAECA00610437 /* Localizable.strings */,
+				0D41983220BFAECA00610437 /* InfoPlist.strings */,
+			);
+			path = "zh-Hans.lproj";
 			sourceTree = "<group>";
 		};
 		0D5FB5AC202943CF002E1628 /* Data */ = {
@@ -576,6 +631,9 @@
 				0DE8FE932016E6A100A09644 /* Main.storyboard */,
 				0DE8FE962016E6A100A09644 /* Info.plist */,
 				0DE8FE972016E6A200A09644 /* main.m */,
+				0D41982520BFACC800610437 /* DiscoverMelody */,
+				0D41982420BFACBA00610437 /* WeDesign */,
+				0D41982320BFAC9100610437 /* WeEducation */,
 			);
 			path = DiscoverMelody;
 			sourceTree = "<group>";
@@ -679,6 +737,11 @@
 		0DE8FE802016E6A100A09644 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					DiscoverMelody,
+					WeDesign,
+					WeEducation,
+				);
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Beijing Discover Melody co., ltd";
 				TargetAttributes = {
@@ -749,10 +812,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D41983720BFAECA00610437 /* Main.strings in Resources */,
 				0DFE02062022C088001BF8DD /* AppIcon.icns in Resources */,
+				0D41983620BFAECA00610437 /* InfoPlist.strings in Resources */,
 				0DE8FE922016E6A100A09644 /* Assets.xcassets in Resources */,
 				0D1968CD20AA9B4B00CCCB1B /* AppIcon_discover_melody.icns in Resources */,
+				0D41983820BFAECA00610437 /* Localizable.strings in Resources */,
+				0D41983520BFAECA00610437 /* Localizable.strings in Resources */,
+				0D41983420BFAECA00610437 /* Main.strings in Resources */,
 				0D8D0B5820201D6200698771 /* Localizable.strings in Resources */,
+				0D41983920BFAECA00610437 /* InfoPlist.strings in Resources */,
 				0DE8FE952016E6A100A09644 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1084,6 +1153,54 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		0D41982720BFAECA00610437 /* Main.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D41982820BFAECA00610437 /* en */,
+			);
+			name = Main.strings;
+			sourceTree = "<group>";
+		};
+		0D41982920BFAECA00610437 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D41982A20BFAECA00610437 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		0D41982B20BFAECA00610437 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D41982C20BFAECA00610437 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		0D41982E20BFAECA00610437 /* Main.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D41982F20BFAECA00610437 /* zh-Hans */,
+			);
+			name = Main.strings;
+			sourceTree = "<group>";
+		};
+		0D41983020BFAECA00610437 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D41983120BFAECA00610437 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		0D41983220BFAECA00610437 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D41983320BFAECA00610437 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
 		0D8D0B5A20201D6200698771 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1313,6 +1430,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.DiscoverMelody;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RESOURCES_TARGETED_DEVICE_FAMILY = "";
 			};
 			name = Debug;
 		};
@@ -1334,6 +1452,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = discovermelody.DiscoverMelody;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				RESOURCES_TARGETED_DEVICE_FAMILY = "";
 			};
 			name = Release;
 		};
