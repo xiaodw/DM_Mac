@@ -165,6 +165,8 @@
 		0DFE021620232F4E001BF8DD /* STOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE021320232F4E001BF8DD /* STOverlayView.m */; };
 		287219F112D667F62B92BCB0 /* libPods-DiscoverMelody.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D197F2AA1FA62FB7C61024F5 /* libPods-DiscoverMelody.a */; };
 		5677292BB4D7A0D860CD447D /* libPods-DiscoverMelody.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D197F2AA1FA62FB7C61024F5 /* libPods-DiscoverMelody.a */; };
+		BA9E3A8AA946CF08C46FE8D5 /* libPods-WeDesign.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D27EFB59357DF11B0546FD25 /* libPods-WeDesign.a */; };
+		F39582A7B45557CAF744E42D /* libPods-WeEducation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B05241AADDFCBDA7889508AB /* libPods-WeEducation.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -286,8 +288,14 @@
 		0DFE021120232F4E001BF8DD /* STOverlayWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = STOverlayWindow.h; sourceTree = "<group>"; };
 		0DFE021220232F4E001BF8DD /* STOverlayWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOverlayWindow.m; sourceTree = "<group>"; };
 		0DFE021320232F4E001BF8DD /* STOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOverlayView.m; sourceTree = "<group>"; };
+		2DD98F21FD3EF302356848AD /* Pods-WeDesign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeDesign.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeDesign/Pods-WeDesign.debug.xcconfig"; sourceTree = "<group>"; };
+		83EE960BCAB6A10CA11518B0 /* Pods-WeDesign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeDesign.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeDesign/Pods-WeDesign.release.xcconfig"; sourceTree = "<group>"; };
 		9D37F6364956FB6F275918DD /* Pods-DiscoverMelody.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscoverMelody.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscoverMelody/Pods-DiscoverMelody.release.xcconfig"; sourceTree = "<group>"; };
+		A9FC25E67A477B2477EEABB1 /* Pods-WeEducation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeEducation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeEducation/Pods-WeEducation.debug.xcconfig"; sourceTree = "<group>"; };
+		B05241AADDFCBDA7889508AB /* libPods-WeEducation.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeEducation.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB80448F0A014C56DA6FDCC2 /* Pods-WeEducation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeEducation.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeEducation/Pods-WeEducation.release.xcconfig"; sourceTree = "<group>"; };
 		D197F2AA1FA62FB7C61024F5 /* libPods-DiscoverMelody.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-DiscoverMelody.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D27EFB59357DF11B0546FD25 /* libPods-WeDesign.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-WeDesign.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCB1F852EC7AF1AAF897D82E /* Pods-DiscoverMelody.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscoverMelody.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DiscoverMelody/Pods-DiscoverMelody.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -296,6 +304,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F39582A7B45557CAF744E42D /* libPods-WeEducation.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -303,6 +312,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA9E3A8AA946CF08C46FE8D5 /* libPods-WeDesign.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -630,6 +640,10 @@
 			children = (
 				DCB1F852EC7AF1AAF897D82E /* Pods-DiscoverMelody.debug.xcconfig */,
 				9D37F6364956FB6F275918DD /* Pods-DiscoverMelody.release.xcconfig */,
+				2DD98F21FD3EF302356848AD /* Pods-WeDesign.debug.xcconfig */,
+				83EE960BCAB6A10CA11518B0 /* Pods-WeDesign.release.xcconfig */,
+				A9FC25E67A477B2477EEABB1 /* Pods-WeEducation.debug.xcconfig */,
+				CB80448F0A014C56DA6FDCC2 /* Pods-WeEducation.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -638,6 +652,8 @@
 			isa = PBXGroup;
 			children = (
 				D197F2AA1FA62FB7C61024F5 /* libPods-DiscoverMelody.a */,
+				D27EFB59357DF11B0546FD25 /* libPods-WeDesign.a */,
+				B05241AADDFCBDA7889508AB /* libPods-WeEducation.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -649,9 +665,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D1968C720AA98FF00CCCB1B /* Build configuration list for PBXNativeTarget "WeEducation" */;
 			buildPhases = (
+				31961776AC3D1E14443F58F9 /* [CP] Check Pods Manifest.lock */,
 				0D19688F20AA98FF00CCCB1B /* Sources */,
 				0D1968BD20AA98FF00CCCB1B /* Frameworks */,
 				0D1968BF20AA98FF00CCCB1B /* Resources */,
+				9786B4707B3CC10A8C964BE4 /* [CP] Embed Pods Frameworks */,
+				7BD8CFB17FB93A783B94FC25 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -666,9 +685,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0D619B3D20AA966C00E9618D /* Build configuration list for PBXNativeTarget "WeDesign" */;
 			buildPhases = (
+				AA769E5AA2B21BCF4339115E /* [CP] Check Pods Manifest.lock */,
 				0D619B0520AA966C00E9618D /* Sources */,
 				0D619B3320AA966C00E9618D /* Frameworks */,
 				0D619B3520AA966C00E9618D /* Resources */,
+				99895AD0077F0126C088601E /* [CP] Embed Pods Frameworks */,
+				88D3A64B1248DD72A94F570A /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -815,6 +837,24 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		31961776AC3D1E14443F58F9 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeEducation-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 		568E6B068F59FEE2DF4E1E86 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -831,6 +871,96 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DiscoverMelody/Pods-DiscoverMelody-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7BD8CFB17FB93A783B94FC25 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeEducation/Pods-WeEducation-resources.sh",
+				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DevMateKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeEducation/Pods-WeEducation-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88D3A64B1248DD72A94F570A /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeDesign/Pods-WeDesign-resources.sh",
+				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/DevMateKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeDesign/Pods-WeDesign-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9786B4707B3CC10A8C964BE4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeEducation/Pods-WeEducation-frameworks.sh",
+				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DevMateKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeEducation/Pods-WeEducation-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		99895AD0077F0126C088601E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-WeDesign/Pods-WeDesign-frameworks.sh",
+				"${PODS_ROOT}/DevMateKit/DevMateKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DevMateKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WeDesign/Pods-WeDesign-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA769E5AA2B21BCF4339115E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-WeDesign-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D6B891904766246AE6CE5579 /* [CP] Embed Pods Frameworks */ = {
@@ -1085,6 +1215,7 @@
 /* Begin XCBuildConfiguration section */
 		0D1968C820AA98FF00CCCB1B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A9FC25E67A477B2477EEABB1 /* Pods-WeEducation.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DiscoverMelody/DiscoverMelody.entitlements;
@@ -1105,6 +1236,7 @@
 		};
 		0D1968C920AA98FF00CCCB1B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB80448F0A014C56DA6FDCC2 /* Pods-WeEducation.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DiscoverMelody/DiscoverMelody.entitlements;
@@ -1125,6 +1257,7 @@
 		};
 		0D619B3E20AA966C00E9618D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DD98F21FD3EF302356848AD /* Pods-WeDesign.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DiscoverMelody/DiscoverMelody.entitlements;
@@ -1145,6 +1278,7 @@
 		};
 		0D619B3F20AA966C00E9618D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83EE960BCAB6A10CA11518B0 /* Pods-WeDesign.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = DiscoverMelody/DiscoverMelody.entitlements;

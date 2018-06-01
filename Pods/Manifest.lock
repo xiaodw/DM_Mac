@@ -19,7 +19,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking
-  - AgoraRtcEngine_macOS
+  - AgoraRtcEngine_macOS (~> 1.14.0)
   - DevMateKit
   - Masonry
   - MJExtension (~> 3.0)
@@ -31,6 +31,6 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
 
-PODFILE CHECKSUM: bf057cf4dcc1e695ef1a54bc29bc5d4163765f70
+PODFILE CHECKSUM: b2459abfbca1279d184401bac48cb5f350e5361c
 
 COCOAPODS: 1.4.0
