@@ -67,7 +67,9 @@
         [self.window makeKeyAndOrderFront:self];
     }
     if (urls != nil && urls.count > 0 &&
-        YES == [[[urls objectAtIndex:0]absoluteString]hasPrefix:@"wljyedu://lesson"]) {
+        (YES == [[[urls objectAtIndex:0]absoluteString]hasPrefix:@"dism://lesson"] ||
+         YES == [[[urls objectAtIndex:0]absoluteString]hasPrefix:@"wljyedu://lesson"] ||
+         YES == [[[urls objectAtIndex:0]absoluteString]hasPrefix:@"wedesign://lesson"])) {
         ViewController* controller = (ViewController *)self.window.contentViewController;
         if (nil == controller) {
             controller = (ViewController *)[application mainWindow].contentViewController;
