@@ -367,20 +367,6 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
-		0D41982320BFAC9100610437 /* WeEducation */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = WeEducation;
-			sourceTree = "<group>";
-		};
-		0D41982420BFACBA00610437 /* WeDesign */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = WeDesign;
-			sourceTree = "<group>";
-		};
 		0D41982520BFACC800610437 /* DiscoverMelody */ = {
 			isa = PBXGroup;
 			children = (
@@ -622,8 +608,6 @@
 				0DE8FE962016E6A100A09644 /* Info.plist */,
 				0DE8FE972016E6A200A09644 /* main.m */,
 				0D41982520BFACC800610437 /* DiscoverMelody */,
-				0D41982420BFACBA00610437 /* WeDesign */,
-				0D41982320BFAC9100610437 /* WeEducation */,
 			);
 			path = DiscoverMelody;
 			sourceTree = "<group>";
