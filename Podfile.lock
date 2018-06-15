@@ -12,25 +12,25 @@ PODS:
   - AFNetworking/Reachability (3.1.0)
   - AFNetworking/Security (3.1.0)
   - AFNetworking/Serialization (3.1.0)
-  - AgoraRtcEngine_macOS (1.14.0)
+  - AgoraRtcEngine_macOS (2.2.1)
   - DevMateKit (1.7.1)
   - Masonry (1.1.0)
   - MJExtension (3.0.13)
 
 DEPENDENCIES:
   - AFNetworking
-  - AgoraRtcEngine_macOS (~> 1.14.0)
+  - AgoraRtcEngine_macOS (~> 2.2.1)
   - DevMateKit
   - Masonry
   - MJExtension (~> 3.0)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  AgoraRtcEngine_macOS: da5823d05a7ceefca9c33c607bd66dbd52a7f87b
+  AgoraRtcEngine_macOS: b15f6eb3083c42a664833196f1f63e3164021943
   DevMateKit: 3ba77083f5faa40266e0d2d70776de2a82c71dd0
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
 
-PODFILE CHECKSUM: b2459abfbca1279d184401bac48cb5f350e5361c
+PODFILE CHECKSUM: 26a687815cc609b9fa58492c236bc4f3b7910d8d
 
 COCOAPODS: 1.4.0

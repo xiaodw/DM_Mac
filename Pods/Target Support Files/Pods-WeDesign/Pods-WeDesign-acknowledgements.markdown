@@ -26,7 +26,7 @@ THE SOFTWARE.
 
 ## AgoraRtcEngine_macOS
 
-Copyright 2017 agora.io. All rights reserved.
+Copyright 2018 agora.io. All rights reserved.
 
 
 ## DevMateKit

@@ -1,0 +1,1 @@
+../../../../AgoraRtcEngine_macOS/AgoraRtcEngineKit.framework/Headers/AgoraObjects.h
