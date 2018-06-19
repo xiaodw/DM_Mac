@@ -186,9 +186,8 @@
     }
 }
 
-- (void)rtcEngine:(AgoraRtcEngineKit *)engine device:(NSString*) deviceId type:(AgoraRtcDeviceType) deviceType stateChanged:(NSInteger) state {
+-(void)rtcEngine:(AgoraRtcEngineKit *)engine device:(NSString * _Nonnull)deviceId type:(AgoraMediaDeviceType)deviceType stateChanged:(NSInteger)state {
     [self loadDevicesInPopUpButtons];
-    // Repopulate NSPopUpButtons if a device is plugged in or removed
 }
 
 - (void)didClickConfirmButton:(NSButton *)button {

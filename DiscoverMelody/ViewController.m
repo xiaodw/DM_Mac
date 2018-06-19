@@ -373,7 +373,7 @@ enum APP_DATA_STATUS {
     self.screenShare = !self.screenShare;
     if (self.screenShare) {
         //[sender setImage:[NSImage imageNamed:@"screenShareButtonSelected"]];
-        [self.agoraKit startScreenCapture:0 withCaptureFreq:15 AndRect:CGRectZero];
+        [self.agoraKit startScreenCapture:0 withCaptureFreq:15 bitRate:0 andRect:CGRectZero];
     } else {
         //[sender setImage:[NSImage imageNamed:@"screenShareButton"]];
         [self.agoraKit stopScreenCapture];
@@ -703,14 +703,14 @@ enum APP_DATA_STATUS {
         videoCanvas.view = self.videoView.videoCanvasAssistant.videoView;
     }
     
-    videoCanvas.renderMode = AgoraRtc_Render_Fit;
+    videoCanvas.renderMode = AgoraVideoRenderModeFit;
     [self.agoraKit setupLocalVideo:videoCanvas];
     NSLog(@"setupLocalVideo");
     // Bind local video stream to view
 }
 
 - (void)joinChannel {
-    [self.agoraKit joinChannelByKey:self.channelKey channelName:self.channelName info:nil uid:self.userId.integerValue joinSuccess:^(NSString *channel, NSUInteger uid, NSInteger elapsed) {
+    [self.agoraKit joinChannelByToken:self.channelKey channelId:self.channelName info:nil uid:self.userId.integerValue joinSuccess:^(NSString * _Nonnull channel, NSUInteger uid, NSInteger elapsed) {
         [self updateUser:self.userId.integerValue OnlineStatus:YES];
     }];
     
@@ -733,7 +733,7 @@ enum APP_DATA_STATUS {
     AgoraRtcVideoCanvas *videoCanvas = [[AgoraRtcVideoCanvas alloc] init];
     videoCanvas.uid = uid;
     videoCanvas.view = [self canvasViewForUser:uid];
-    videoCanvas.renderMode = AgoraRtc_Render_Fit;
+    videoCanvas.renderMode = AgoraVideoRenderModeFit;
     [self.agoraKit setupRemoteVideo:videoCanvas];
 
     [self updateUser:uid OnlineStatus:YES];
@@ -775,7 +775,7 @@ enum APP_DATA_STATUS {
     [[LogData defaultLogData]reportUserEnter:[NSString stringWithFormat:@"%lu",uid] Reporter:self.channelUidMine MeetingId:self.meetingId Token:self.userToken];
 }
 
-- (void)rtcEngine:(AgoraRtcEngineKit *)engine didOfflineOfUid:(NSUInteger)uid reason:(AgoraRtcUserOfflineReason)reason {
+-(void)rtcEngine:(AgoraRtcEngineKit *)engine didOfflineOfUid:(NSUInteger)uid reason:(AgoraUserOfflineReason)reason {
     if (![self isValidUserId:uid]) {
         return;
     }
@@ -783,7 +783,7 @@ enum APP_DATA_STATUS {
     AgoraRtcVideoCanvas *videoCanvas = [[AgoraRtcVideoCanvas alloc] init];
     videoCanvas.uid = uid;
     videoCanvas.view = nil;
-    videoCanvas.renderMode = AgoraRtc_Render_Fit;
+    videoCanvas.renderMode = AgoraVideoRenderModeFit;
     [self.agoraKit setupRemoteVideo:videoCanvas];
     
     [self updateUser:uid OnlineStatus:NO];

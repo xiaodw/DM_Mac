@@ -14,7 +14,7 @@
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright (c) 2011–2016 Alamofire Software Foundation (http://alamofire.org/)
+			<string>Copyright (c) 2011-2016 Alamofire Software Foundation (http://alamofire.org/)
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -43,7 +43,7 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>Copyright 2017 agora.io. All rights reserved.
+			<string>Copyright 2018 agora.io. All rights reserved.
 </string>
 			<key>License</key>
 			<string>Copyright</string>
@@ -54,7 +54,7 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
-			<string>© 2012-2016 DevMate Inc. All rights reserved.
+			<string>© 2012-2018 DevMate Inc. All rights reserved.
 </string>
 			<key>License</key>
 			<string>Copyright</string>

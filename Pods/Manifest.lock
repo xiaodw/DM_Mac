@@ -1,36 +1,36 @@
 PODS:
-  - AFNetworking (3.1.0):
-    - AFNetworking/NSURLSession (= 3.1.0)
-    - AFNetworking/Reachability (= 3.1.0)
-    - AFNetworking/Security (= 3.1.0)
-    - AFNetworking/Serialization (= 3.1.0)
-    - AFNetworking/UIKit (= 3.1.0)
-  - AFNetworking/NSURLSession (3.1.0):
+  - AFNetworking (3.2.1):
+    - AFNetworking/NSURLSession (= 3.2.1)
+    - AFNetworking/Reachability (= 3.2.1)
+    - AFNetworking/Security (= 3.2.1)
+    - AFNetworking/Serialization (= 3.2.1)
+    - AFNetworking/UIKit (= 3.2.1)
+  - AFNetworking/NSURLSession (3.2.1):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (3.1.0)
-  - AFNetworking/Security (3.1.0)
-  - AFNetworking/Serialization (3.1.0)
-  - AgoraRtcEngine_macOS (1.14.0)
-  - DevMateKit (1.7.1)
+  - AFNetworking/Reachability (3.2.1)
+  - AFNetworking/Security (3.2.1)
+  - AFNetworking/Serialization (3.2.1)
+  - AgoraRtcEngine_macOS (2.2.1)
+  - DevMateKit (1.8.2)
   - Masonry (1.1.0)
-  - MJExtension (3.0.13)
+  - MJExtension (3.0.15)
 
 DEPENDENCIES:
   - AFNetworking
-  - AgoraRtcEngine_macOS (~> 1.14.0)
+  - AgoraRtcEngine_macOS (~> 2.2.1)
   - DevMateKit
   - Masonry
   - MJExtension (~> 3.0)
 
 SPEC CHECKSUMS:
-  AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  AgoraRtcEngine_macOS: da5823d05a7ceefca9c33c607bd66dbd52a7f87b
-  DevMateKit: 3ba77083f5faa40266e0d2d70776de2a82c71dd0
+  AFNetworking: b6f891fdfaed196b46c7a83cf209e09697b94057
+  AgoraRtcEngine_macOS: b15f6eb3083c42a664833196f1f63e3164021943
+  DevMateKit: e0bf74589bbbeb0a7b469a75b88667e00e109474
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
-  MJExtension: 5932755f451458eefa24239358817f8d291240c7
+  MJExtension: 3f039575db1b135a20699ad298713b26acec1528
 
-PODFILE CHECKSUM: b2459abfbca1279d184401bac48cb5f350e5361c
+PODFILE CHECKSUM: 86f3bf60cd0c79009ed8a4e44d5b5199a4fbbdf5
 
 COCOAPODS: 1.4.0
