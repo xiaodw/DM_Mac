@@ -8,8 +8,11 @@
 
 #import "VideoCanvas.h"
 #import <Masonry.h>
+#import "DMImageView.h"
 
 @interface VideoCanvas()
+@property (strong, nonatomic) NSArray *images;
+@property (strong, nonatomic) DMImageView *imageView;
 @property BOOL isShowBoarder;
 @property BOOL isUserOnline;
 @property (nonatomic) NSSize videoSize;
@@ -68,6 +71,8 @@
     [self.placeholderView setImage:[NSImage imageNamed:@"userNotEnter"]];
     [self.placeholderView setImageScaling:YES];
     [self addSubview:self.placeholderView];
+    
+    [self addSubview:self.imageView positioned:NSWindowAbove relativeTo:self.videoView];
 }
 
 - (void)layoutSubViews {
@@ -92,6 +97,13 @@
         make.width.mas_equalTo(128);
         make.height.mas_equalTo(128);
     }];
+    
+    [_imageView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.left.equalTo(@20);
+        make.top.equalTo(@20);
+        make.width.equalTo(@18);
+        make.height.equalTo(@18);
+    }];
 }
 
 -(void)mouseDown:(NSEvent *)event {
@@ -107,6 +119,12 @@
 
 -(BOOL)getPlaceHolderHidden {
     return self.placeholderView.hidden;
+}
+
+- (void)setNetworkQuality:(NSInteger)networkQuality {
+    _networkQuality = networkQuality;
+    NSString *str = self.images[networkQuality];
+    self.imageView.dm_image = [NSImage imageNamed:str];
 }
 
 -(void)setUserOnline:(BOOL)yesno {
@@ -145,6 +163,29 @@
 -(void)setClickAction:(SEL)action withTarget:(id)target {
     self.action = action;
     self.target = target;
+}
+
+- (NSArray *)images {
+    if (!_images) {
+        _images = @[@"icon_信号灰",
+                    @"icon_信号绿",
+                    @"icon_信号黄",
+                    @"icon_信号黄",
+                    @"icon_信号红",
+                    @"icon_信号红",
+                    @"icon_信号灰"];
+    }
+    
+    return _images;
+}
+
+- (DMImageView *)imageView {
+    if (!_imageView) {
+        _imageView = [DMImageView new];
+        _imageView.dm_image = [NSImage imageNamed:self.images[6]];
+    }
+    
+    return _imageView;
 }
 
 @end

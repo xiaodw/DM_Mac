@@ -44,6 +44,7 @@ enum APP_DATA_STATUS {
 #define DMLOGIN_STEP_2_DONE @"DmLoginStep2Done"
 
 @interface ViewController()
+
 @property (strong,nonatomic) LoginView* loginView;
 @property (strong,nonatomic) VideoView* videoView;
 @property (strong,nonatomic) OverlayView* overlayView;
@@ -247,6 +248,7 @@ enum APP_DATA_STATUS {
     [self.videoView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
     }];
+    
     [self.overlayView mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.mas_equalTo(self.view);
     }];
@@ -666,6 +668,8 @@ enum APP_DATA_STATUS {
 }
 
 -(VideoCanvas*) videoCanvasForUser:(NSUInteger)userId {
+    if (userId == 0) { userId = self.userId.integerValue; }
+    
     if (userId == self.channelUidStudent.integerValue) {
         return self.videoView.videoCanvasStudent;
     } else if (userId == self.channelUidTeacher.integerValue) {
@@ -683,7 +687,10 @@ enum APP_DATA_STATUS {
 
 - (void)rtcEngine:(AgoraRtcEngineKit * _Nonnull)engine networkQuality:(NSUInteger)uid txQuality:(AgoraNetworkQuality)txQuality rxQuality:(AgoraNetworkQuality)rxQuality {
 
-    NSLog(@"txQuality: %d, rxQuality:%d, uid: %d", txQuality, rxQuality, uid);
+    VideoCanvas *videoCanvas = [self videoCanvasForUser:uid];
+    NSInteger tx = txQuality;
+    NSInteger rx = rxQuality;
+    videoCanvas.networkQuality = (tx + rx) * 0.5;
 }
 
 - (void)setupVideo {
@@ -784,7 +791,7 @@ enum APP_DATA_STATUS {
         return;
     }
     
-    [[LogData defaultLogData]reportUserEnter:[NSString stringWithFormat:@"%lu",uid] Reporter:self.channelUidMine MeetingId:self.meetingId Token:self.userToken];
+    [[LogData defaultLogData] reportUserEnter:[NSString stringWithFormat:@"%lu",uid] Reporter:self.channelUidMine MeetingId:self.meetingId Token:self.userToken];
 }
 - (void)rtcEngine:(AgoraRtcEngineKit *)engine didOfflineOfUid:(NSUInteger)uid reason:(AgoraUserOfflineReason)reason {
     if (![self isValidUserId:uid]) {

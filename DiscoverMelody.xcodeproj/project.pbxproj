@@ -164,6 +164,11 @@
 		0DFE021520232F4E001BF8DD /* STOverlayWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE021220232F4E001BF8DD /* STOverlayWindow.m */; };
 		0DFE021620232F4E001BF8DD /* STOverlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DFE021320232F4E001BF8DD /* STOverlayView.m */; };
 		287219F112D667F62B92BCB0 /* libPods-DiscoverMelody.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D197F2AA1FA62FB7C61024F5 /* libPods-DiscoverMelody.a */; };
+		512E5CAF20E4D86700188555 /* DMImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 512E5CA820E4D86700188555 /* DMImageView.m */; };
+		512E5CB020E4D86700188555 /* DMButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 512E5CA920E4D86700188555 /* DMButton.m */; };
+		512E5CB120E4D86700188555 /* DMControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 512E5CAA20E4D86700188555 /* DMControl.m */; };
+		512E5CB220E4D86700188555 /* DMView.m in Sources */ = {isa = PBXBuildFile; fileRef = 512E5CAB20E4D86700188555 /* DMView.m */; };
+		512E5CB520E4D96300188555 /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 512E5CB420E4D96300188555 /* NSString+Extension.m */; };
 		5677292BB4D7A0D860CD447D /* libPods-DiscoverMelody.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D197F2AA1FA62FB7C61024F5 /* libPods-DiscoverMelody.a */; };
 		BA9E3A8AA946CF08C46FE8D5 /* libPods-WeDesign.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D27EFB59357DF11B0546FD25 /* libPods-WeDesign.a */; };
 		F39582A7B45557CAF744E42D /* libPods-WeEducation.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B05241AADDFCBDA7889508AB /* libPods-WeEducation.a */; };
@@ -289,6 +294,16 @@
 		0DFE021220232F4E001BF8DD /* STOverlayWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOverlayWindow.m; sourceTree = "<group>"; };
 		0DFE021320232F4E001BF8DD /* STOverlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = STOverlayView.m; sourceTree = "<group>"; };
 		2DD98F21FD3EF302356848AD /* Pods-WeDesign.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeDesign.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeDesign/Pods-WeDesign.debug.xcconfig"; sourceTree = "<group>"; };
+		512E5CA720E4D86700188555 /* DMView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMView.h; sourceTree = "<group>"; };
+		512E5CA820E4D86700188555 /* DMImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMImageView.m; sourceTree = "<group>"; };
+		512E5CA920E4D86700188555 /* DMButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMButton.m; sourceTree = "<group>"; };
+		512E5CAA20E4D86700188555 /* DMControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMControl.m; sourceTree = "<group>"; };
+		512E5CAB20E4D86700188555 /* DMView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMView.m; sourceTree = "<group>"; };
+		512E5CAC20E4D86700188555 /* DMImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMImageView.h; sourceTree = "<group>"; };
+		512E5CAD20E4D86700188555 /* DMControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMControl.h; sourceTree = "<group>"; };
+		512E5CAE20E4D86700188555 /* DMButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMButton.h; sourceTree = "<group>"; };
+		512E5CB320E4D96200188555 /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		512E5CB420E4D96300188555 /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
 		83EE960BCAB6A10CA11518B0 /* Pods-WeDesign.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeDesign.release.xcconfig"; path = "Pods/Target Support Files/Pods-WeDesign/Pods-WeDesign.release.xcconfig"; sourceTree = "<group>"; };
 		9D37F6364956FB6F275918DD /* Pods-DiscoverMelody.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DiscoverMelody.release.xcconfig"; path = "Pods/Target Support Files/Pods-DiscoverMelody/Pods-DiscoverMelody.release.xcconfig"; sourceTree = "<group>"; };
 		A9FC25E67A477B2477EEABB1 /* Pods-WeEducation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WeEducation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WeEducation/Pods-WeEducation.debug.xcconfig"; sourceTree = "<group>"; };
@@ -331,6 +346,7 @@
 		0D10272820188A3A00D15A54 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				512E5CA620E4D86700188555 /* Common */,
 				0D8456AB202C241E00EFDB6B /* OverlayView */,
 				0DFE020D20232F2A001BF8DD /* STOverlay */,
 				0D89AB92201AC9D20055BAF9 /* LoginView */,
@@ -478,6 +494,8 @@
 		0D6F62662016E7080040CF38 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				512E5CB320E4D96200188555 /* NSString+Extension.h */,
+				512E5CB420E4D96300188555 /* NSString+Extension.m */,
 				0D6F62672016E7080040CF38 /* DMAccount */,
 				0D6F626E2016E7080040CF38 /* DMConst.h */,
 				0D6F626F2016E7080040CF38 /* DMEnums.h */,
@@ -633,6 +651,21 @@
 				0DFE021220232F4E001BF8DD /* STOverlayWindow.m */,
 			);
 			path = STOverlay;
+			sourceTree = "<group>";
+		};
+		512E5CA620E4D86700188555 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				512E5CA720E4D86700188555 /* DMView.h */,
+				512E5CAB20E4D86700188555 /* DMView.m */,
+				512E5CAD20E4D86700188555 /* DMControl.h */,
+				512E5CAA20E4D86700188555 /* DMControl.m */,
+				512E5CAE20E4D86700188555 /* DMButton.h */,
+				512E5CA920E4D86700188555 /* DMButton.m */,
+				512E5CAC20E4D86700188555 /* DMImageView.h */,
+				512E5CA820E4D86700188555 /* DMImageView.m */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		94A96495739144B0F154CE85 /* Pods */ = {
@@ -1102,8 +1135,10 @@
 				0DE8FE902016E6A100A09644 /* ViewController.m in Sources */,
 				0D6F62652016E6FE0040CF38 /* DMLoginDataModel.m in Sources */,
 				0D6F627A2016E7080040CF38 /* DMSecretKeyManager.m in Sources */,
+				512E5CB220E4D86700188555 /* DMView.m in Sources */,
 				0D6F62432016E6F70040CF38 /* DMBaseDataModel.m in Sources */,
 				0D6F623E2016E6ED0040CF38 /* DMUserDefaults.m in Sources */,
+				512E5CB020E4D86700188555 /* DMButton.m in Sources */,
 				0DFE021420232F4E001BF8DD /* STOverlayController.m in Sources */,
 				0DFE021520232F4E001BF8DD /* STOverlayWindow.m in Sources */,
 				0D89AB95201ACB620055BAF9 /* VideoView.m in Sources */,
@@ -1115,14 +1150,17 @@
 				0D6F62612016E6FE0040CF38 /* DMCloudConfigData.m in Sources */,
 				0D5FB5AF2029440F002E1628 /* AppData.m in Sources */,
 				0D3EEDE9202AAB5B0010540D /* LocalData.m in Sources */,
+				512E5CB120E4D86700188555 /* DMControl.m in Sources */,
 				0D74BC442019B0DC002D71E9 /* VideoStatusBar.m in Sources */,
 				0D6F62622016E6FE0040CF38 /* DMClassFileDataModel.m in Sources */,
+				512E5CAF20E4D86700188555 /* DMImageView.m in Sources */,
 				0D3EEDF3202AAE8C0010540D /* LogData.m in Sources */,
 				0DBFF62820219A94005513E9 /* ColorButton.m in Sources */,
 				0D6F625F2016E6FE0040CF38 /* DMCustomerDataModel.m in Sources */,
 				0D6F627D2016E7080040CF38 /* DMTools.m in Sources */,
 				0D6F627C2016E7080040CF38 /* DMConst.m in Sources */,
 				0D6F62602016E6FE0040CF38 /* DMCourseDatasModel.m in Sources */,
+				512E5CB520E4D96300188555 /* NSString+Extension.m in Sources */,
 				0D74BC472019C23A002D71E9 /* CountDownClock.m in Sources */,
 				0D6F625C2016E6FE0040CF38 /* DMQuestData.m in Sources */,
 				0D6F62792016E7080040CF38 /* DMSetConfigData.m in Sources */,

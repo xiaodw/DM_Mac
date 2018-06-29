@@ -10,6 +10,8 @@
 
 @interface VideoCanvas : NSView
 
+@property (assign, nonatomic) NSInteger networkQuality;
+
 @property (strong, nonatomic) NSView *videoView; // 播放的view
 @property (strong, nonatomic) NSImageView *placeholderView; // 占位图标
 -(void)setPlaceHolderHidden:(BOOL)hidden;
