@@ -133,6 +133,7 @@
     [self.videoView.layer setBackgroundColor:[NSColor blackColor].CGColor];
     [self.videoView setHidden:!yesno];
     [self.placeholderView setHidden:yesno];
+    [self.imageView setHidden:!yesno];
 }
 
 -(BOOL)getUserOnline {
