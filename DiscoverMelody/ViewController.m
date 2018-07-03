@@ -690,7 +690,7 @@ enum APP_DATA_STATUS {
     VideoCanvas *videoCanvas = [self videoCanvasForUser:uid];
     NSInteger tx = txQuality;
     NSInteger rx = rxQuality;
-    videoCanvas.networkQuality = (tx + rx) * 0.5;
+    videoCanvas.networkQuality = (tx + rx + 1) * 0.5;
 }
 
 - (void)setupVideo {
